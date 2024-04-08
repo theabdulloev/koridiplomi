@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="light">
       <body className="w-screen h-screen flex flex-col overflow-x-hidden">
+        <Analytics />
         <HeaderKor />
         <Providers>{children}</Providers>
-        <Analytics />
       </body>
     </html>
   );

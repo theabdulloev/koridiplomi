@@ -82,7 +82,7 @@ export default function Kor() {
     <Card className="w-full min-h-60">
       <CardHeader className="flex gap-3">
         <div className="w-10 h-10 rounded-sm bg-gray-400">
-        <Image alt="nextui logo" height={40} radius="sm" width={40} />
+          <Image alt="nextui logo" height={40} radius="sm" width={40} />
         </div>
         <div className="flex flex-col">
           <p className="text-md"> Name Company</p>
@@ -91,7 +91,7 @@ export default function Kor() {
       </CardHeader>
       <Divider />
       <CardBody>
-        <div className="space-x-3">
+        <div className="space-x-3 w-full flex flex-col lg:justify-start lg:flex-row space-y-2 items-start justify-center lg:items-center">
           <span>2 000c - 2 500c </span>
           <Chip radius="sm" variant="bordered">
             Можно удалёно
