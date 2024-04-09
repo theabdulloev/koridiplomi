@@ -1,7 +1,7 @@
 export async function GET() {
   const data = [
     {
-      userName: "user54381",
+      userName: "user5481",
       vip: true,
       fullName: "John Doe",
       description:
@@ -13,7 +13,7 @@ export async function GET() {
       location: "Khujand",
     },
     {
-      userName: "user90243",
+      userName: "user9023",
       vip: true,
       fullName: "Alice Smith",
       description:
