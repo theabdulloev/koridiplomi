@@ -18,7 +18,7 @@ export default async function Home() {
       vip: true,
       fullName: "John Doe",
       description:
-        "Backend developer and data science enthusiast. Let's explore the world of algorithms together!",
+        "Специалист Фирменного салона сотовой связи по Согдийской области",
       watch: "1025",
       salary: "5 000",
       contacts: "+992 92 999 99 99",
@@ -29,8 +29,7 @@ export default async function Home() {
       userName: "user90243",
       vip: true,
       fullName: "Alice Smith",
-      description:
-        "Mobile app developer and technology geek. Join me in the world of mobile innovation!",
+      description: "Графический дизайнер",
       watch: "1897",
       salary: "12 000",
       contacts: "+992 92 999 99 99",
@@ -41,8 +40,7 @@ export default async function Home() {
       userName: "user17653",
       vip: false,
       fullName: "Emma Johnson",
-      description:
-        "Game developer and virtual reality explorer. Embark on an epic gaming journey with me!",
+      description: "Middle PHP Laravel разработчик",
       watch: "3245",
       salary: "2 700",
       contacts: "+992 92 999 99 99",
@@ -53,8 +51,7 @@ export default async function Home() {
       userName: "user17652",
       vip: false,
       fullName: "Emma Johnson",
-      description:
-        "Game developer and virtual reality explorer. Embark on an epic gaming journey with me!",
+      description: "Специалист по мониторингу и видеонаблюдению",
       watch: "3245",
       salary: "42 700",
       contacts: "+992 92 999 99 99",
@@ -65,8 +62,7 @@ export default async function Home() {
       userName: "user17651",
       vip: false,
       fullName: "Emma Johnson",
-      description:
-        "Game developer and virtual reality explorer. Embark on an epic gaming journey with me!",
+      description: "Оператор колл-центра",
       watch: "3245",
       salary: "1 700",
       contacts: "+992 92 999 99 99",
