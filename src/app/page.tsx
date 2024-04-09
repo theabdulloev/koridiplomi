@@ -2,7 +2,7 @@
 import Kor from "./components/CardKor";
 import Filter from "./components/FilterCompanent";
 async function getData() {
-  const res = await fetch("/api/", { method: "GET" });
+  const res = await fetch("/api", { method: "GET" });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
