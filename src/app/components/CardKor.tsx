@@ -53,7 +53,7 @@ export default function Kor({
       </CardHeader>
       <Divider />
       <CardBody>
-        <p>{description}</p>
+        <p className="text-2xl">{description}</p>
         <br />
         <div className="w-full flex flex-col lg:justify-start lg:flex-row gap-3 items-start justify-center lg:items-center">
           <Chip radius="sm" color="success" variant="bordered">

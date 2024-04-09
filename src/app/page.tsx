@@ -72,9 +72,9 @@ export default async function Home() {
   ];
   return (
     <main>
-      <div className="p-5 text-center text-2xl">
-        Кори дустдоштаи худро <span className="text-primary">имруз</span> пайдо
-        намо!
+      <div className="p-5 text-center uppercase text-2xl">
+        Найдите свою любимую работу{" "}
+        <span className="text-primary">сегодня!</span>
       </div>
       <div className="container mx-auto border grid md:grid-cols-[minmax(200px,_400px)_1fr]">
         <div className="border-r p-4">
