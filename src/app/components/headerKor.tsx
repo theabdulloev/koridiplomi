@@ -15,14 +15,15 @@ import {
   Avatar,
   DropdownItem,
 } from "@nextui-org/react";
-import Logo from "./logo";
+import LogoKor from "./Logo";
+
 export default function HeaderKor() {
   const pathname = usePathname();
   return (
     <Navbar>
       <NavbarBrand>
         <p className="font-bold flex space-x-2 text-inherit">
-          <Logo />
+          <LogoKor />
           <Link color="foreground" href="/">
             KOR TJ
           </Link>

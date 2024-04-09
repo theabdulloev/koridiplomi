@@ -15,7 +15,7 @@ export default function Filter() {
   const [valueR, setValueR] = useState<SliderValue>([500, 30000]);
   return (
     <div className="space-y-4">
-      <div>
+      {/* <div>
         <p className="text-default-500 text-small">
           Selected: {selected.join(", ")}
         </p>
@@ -24,7 +24,7 @@ export default function Filter() {
           Selected budget:{" "}
           {Array.isArray(valueR) && valueR.map((b) => `$${b}`).join(" – ")}
         </p>
-      </div>
+      </div> */}
       <div className="border-b">
         <CheckboxGroup
           label="Подработка"
@@ -58,7 +58,7 @@ export default function Filter() {
           label="Уровень дохода"
           formatOptions={{ style: "currency", currency: "SMN" }}
           step={100}
-          maxValue={100000}
+          maxValue={50000}
           minValue={0}
           value={valueR}
           onChange={setValueR}

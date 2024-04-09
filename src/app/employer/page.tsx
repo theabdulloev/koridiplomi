@@ -1,5 +1,3 @@
-"use client";
-
 export default function Home() {
   let arr = ["", "", "", ""];
   return (

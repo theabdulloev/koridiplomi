@@ -10,7 +10,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   return (
     <NextUIProvider className="w-full h-full" navigate={router.push}>
-      {children}
+        {children}
       <div className="w-full flex justify-center items-center h-14 text-center sm:h-8 bg-gray-200 text-gray-500">
         Кори дипломии Абдуллоев Исмоилчон Комилчонович 2020-2024
       </div>
