@@ -10,6 +10,7 @@ import {
   SliderValue,
 } from "@nextui-org/react";
 import { useState } from "react";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export default function Filter() {
   const [selected, setSelected] = useState(["buenos-aires", "sydney"]);
@@ -71,6 +72,7 @@ export default function Filter() {
       <Badge color={colorScheme === "dark" ? "blue" : "teal"} variant="filled">
         Your system color scheme is {colorScheme}
       </Badge>
+      <ThemeSwitcher />
     </div>
   );
 }
