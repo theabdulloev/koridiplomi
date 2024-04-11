@@ -36,7 +36,7 @@ export default function RootLayout({
         ></meta>
         <ColorSchemeScript />
       </head>
-      <body className="w-screen bg-white  h-screen flex flex-col overflow-x-hidden">
+      <body className="w-screen h-screen flex flex-col overflow-x-hidden">
         <SpeedInsights />
         <Analytics />
         <HeaderKor />
