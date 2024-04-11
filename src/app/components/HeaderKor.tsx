@@ -38,14 +38,14 @@ export default function App() {
       <NavbarContent className="sm:hidden pr-3" justify="start">
         <NavbarBrand className="gap-3">
           <LogoKor />
-          <p className="font-bold text-3xl text-inherit">KOR TJ</p>
+          <p className="font-bold text-3xl text-inherit">BEKOR TJ</p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand className="gap-3">
           <LogoKor />
-          <p className="font-bold text-3xl text-inherit">KOR TJ</p>
+          <p className="font-bold text-3xl text-inherit">BEKOR TJ</p>
         </NavbarBrand>
         <NavbarItem isActive={pathname == "/"}>
           <Link

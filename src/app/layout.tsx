@@ -7,16 +7,16 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 export const metadata: Metadata = {
-  title: "KOR TJ - Портали ҷойҳои корӣ",
+  title: "BEKOR TJ - Портали ҷойҳои корӣ",
   description: "Кори дипломии Абдуллоев Исмоилчон Комилчонович 2020-2024",
   authors: [{ name: "Ismoiljon Abdulloev", url: "instagram.com/theabdulloev" }],
   appleWebApp: {
     capable: true,
-    title: "KOR TJ",
+    title: "BEKOR TJ",
     statusBarStyle: "black-translucent",
   },
   category: "Vacancies Web-App",
-  applicationName: "KOR TJ ваканция",
+  applicationName: "BEKOR TJ ваканция",
   keywords: ["vacancies", "ваканция", "вакансия", "кор"],
 };
 
