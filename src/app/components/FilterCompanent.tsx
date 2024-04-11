@@ -1,4 +1,6 @@
 "use client";
+import { Badge } from "@mantine/core";
+import { useColorScheme } from "@mantine/hooks";
 import {
   Checkbox,
   CheckboxGroup,
@@ -13,6 +15,7 @@ export default function Filter() {
   const [selected, setSelected] = useState(["buenos-aires", "sydney"]);
   const [selectedR, setSelectedR] = useState("london");
   const [valueR, setValueR] = useState<SliderValue>([500, 30000]);
+  const colorScheme = useColorScheme();
   return (
     <div className="space-y-4">
       {/* <div>
@@ -65,6 +68,9 @@ export default function Filter() {
           className="max-w-md"
         />
       </div>
+      <Badge color={colorScheme === "dark" ? "blue" : "teal"} variant="filled">
+        Your system color scheme is {colorScheme}
+      </Badge>
     </div>
   );
 }

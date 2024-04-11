@@ -1,6 +1,7 @@
 "use server";
 import Kor from "./components/CardKor";
 import Filter from "./components/FilterCompanent";
+
 async function getData() {
   const res = await fetch("/api", { method: "GET" });
 

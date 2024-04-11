@@ -4,6 +4,8 @@ import "./globals.css";
 import HeaderKor from "./components/HeaderKor";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import "@mantine/core/styles.css";
 export const metadata: Metadata = {
   title: "KOR TJ - Портали ҷойҳои корӣ",
   description: "Кори дипломии Абдуллоев Исмоилчон Комилчонович 2020-2024",
@@ -28,18 +30,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9758420922937149"
-          crossOrigin="anonymous"
-        ></script>
-        <meta name="google-adsense-account" content="ca-pub-9758420922937149"></meta>
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-9758420922937149"
+        ></meta>
+        <ColorSchemeScript />
       </head>
       <body className="w-screen bg-white  h-screen flex flex-col overflow-x-hidden">
         <SpeedInsights />
         <Analytics />
         <HeaderKor />
-        <Providers>{children}</Providers>
+        <MantineProvider>
+          <Providers>{children}</Providers>
+        </MantineProvider>
       </body>
     </html>
   );
