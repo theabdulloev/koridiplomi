@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import {
   Navbar,
@@ -14,7 +13,8 @@ import {
 } from "@nextui-org/react";
 import LogoKor from "./Logo";
 import { usePathname } from "next/navigation";
-
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/store/store";
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const pathname = usePathname();
@@ -26,7 +26,6 @@ export default function App() {
     { title: "Настройки", hrefName: "/settings" },
     { title: "Выйти", hrefName: "/logout" },
   ];
-
   return (
     <Navbar isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent className="sm:hidden" justify="start">
@@ -38,14 +37,18 @@ export default function App() {
       <NavbarContent className="sm:hidden pr-3" justify="start">
         <NavbarBrand className="gap-3">
           <LogoKor />
-          <p className="font-bold text-3xl text-inherit">BEKOR TJ</p>
+          <p className="font-bold dark:text-white text-3xl text-inherit">
+            BEKOR TJ
+          </p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand className="gap-3">
           <LogoKor />
-          <p className="font-bold text-3xl text-inherit">BEKOR TJ</p>
+          <p className="font-bold dark:text-white text-3xl text-inherit">
+            BEKOR TJ
+          </p>
         </NavbarBrand>
         <NavbarItem isActive={pathname == "/"}>
           <Link

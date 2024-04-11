@@ -10,16 +10,16 @@ export function Providers({ children }: { children: React.ReactNode }) {
   const router = useRouter();
 
   return (
-    <NextUIProvider
-      className="w-full text-foreground bg-background h-full"
-      navigate={router.push}
-    >
-      <NextThemesProvider attribute="class" defaultTheme="dark">
-        {children}
-      </NextThemesProvider>
-      <div className="w-full flex justify-center items-center h-14 text-center sm:h-8">
-        Кори дипломии Абдуллоев Исмоилчон Комилчонович 2020-2024
-      </div>
-    </NextUIProvider>
+      <NextUIProvider
+        className="w-full text-foreground bg-background"
+        navigate={router.push}
+      >
+        <NextThemesProvider attribute="class" defaultTheme="dark">
+          {children}
+        </NextThemesProvider>
+        <div className="w-full flex justify-center items-center h-14 text-center sm:h-8">
+          Кори дипломии Абдуллоев Исмоилчон Комилчонович 2020-2024
+        </div>
+      </NextUIProvider>
   );
 }

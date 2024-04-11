@@ -16,10 +16,9 @@ export function ThemeSwitcher() {
   if (!mounted) return null;
 
   return (
-    <div>
-      The current theme is: {theme}
-      <Button onClick={() => setTheme("light")}>Light Mode</Button>
-      <Button onClick={() => setTheme("dark")}>Dark Mode</Button>
+    <div className="flex gap-3">
+      <Button className="w-full" onClick={() => setTheme("light")}>Light Mode</Button>
+      <Button className="w-full" onClick={() => setTheme("dark")}>Dark Mode</Button>
     </div>
   );
 }

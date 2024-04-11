@@ -1,7 +1,6 @@
 "use client";
-import { Badge } from "@mantine/core";
-import { useColorScheme } from "@mantine/hooks";
 import {
+  Button,
   Checkbox,
   CheckboxGroup,
   Radio,
@@ -11,12 +10,16 @@ import {
 } from "@nextui-org/react";
 import { useState } from "react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/store/store";
+import { decrement, increment } from "@/store/slice";
 
 export default function Filter() {
   const [selected, setSelected] = useState(["buenos-aires", "sydney"]);
   const [selectedR, setSelectedR] = useState("london");
   const [valueR, setValueR] = useState<SliderValue>([500, 30000]);
-  const colorScheme = useColorScheme();
+  const count = useSelector((state: RootState) => state.counter.value);
+  const dispatch = useDispatch();
   return (
     <div className="space-y-4">
       {/* <div>
@@ -69,10 +72,24 @@ export default function Filter() {
           className="max-w-md"
         />
       </div>
-      <Badge color={colorScheme === "dark" ? "blue" : "teal"} variant="filled">
-        Your system color scheme is {colorScheme}
-      </Badge>
-      <ThemeSwitcher />
+      {/* <div>
+        <Button
+          aria-label="Increment value"
+          onClick={() => dispatch(increment())}
+        >
+          Increment
+        </Button>
+        <span>{count}</span>
+        <Button
+          aria-label="Decrement value"
+          onClick={() => dispatch(decrement())}
+        >
+          Decrement
+        </Button>
+      </div> */}
+      <div className="self-end-end">
+        <ThemeSwitcher />
+      </div>
     </div>
   );
 }
