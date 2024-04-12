@@ -14,7 +14,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         className="w-full text-foreground bg-background"
         navigate={router.push}
       >
-        <NextThemesProvider attribute="class" defaultTheme="dark">
+        <NextThemesProvider attribute="class" defaultTheme="light">
           {children}
         </NextThemesProvider>
         <div className="w-full flex justify-center items-center h-14 text-center sm:h-8">
