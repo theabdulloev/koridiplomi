@@ -1,13 +1,13 @@
 "use server";
 import Kor from "./components/CardKor";
 import Filter from "./components/FilterCompanent";
-async function getData() {
-  const res = await fetch("https://bekor.vercel.app/api/", { method: "GET" });
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  return res.json();
-}
+// async function getData() {
+//   const res = await fetch("https://bekor.vercel.app/api/", { method: "GET" });
+//   if (!res.ok) {
+//     throw new Error("Failed to fetch data");
+//   }
+//   return res.json();
+// }
 export default async function Home() {
   // const data = await getData();
   const data = [
