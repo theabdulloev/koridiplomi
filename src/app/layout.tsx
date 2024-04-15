@@ -7,8 +7,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 export const metadata: Metadata = {
-  title: "BEKOR TJ - Портали ҷойҳои корӣ",
-  description: "Кори дипломии Абдуллоев Исмоилчон Комилчонович 2020-2024",
+  title: "BEKOR TJ - Портали ҷойҳои кории холӣ",
+  description: "Кори дипломии Абдуллоев Исмоилчон Комилчонович 2020-2024, Донишгохи Давлатии Хучанд ба номи академик Бобочон Гафуров",
   authors: [{ name: "Ismoiljon Abdulloev", url: "instagram.com/theabdulloev" }],
   appleWebApp: {
     capable: true,
