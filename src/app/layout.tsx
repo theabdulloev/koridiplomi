@@ -24,11 +24,15 @@ export const metadata: Metadata = {
     title: "BEKOR TJ - Портали ҷойҳои кории холӣ",
     description: "BEKOR TJ - Портали ҷойҳои кории холӣ",
     siteName: "BEKOR TJ - Портали ҷойҳои кории холӣ",
+    countryName: "TAJIKISTAN DUSHANBE",
     images: [
       {
-        url: "https://bekor.vercel.app/favicon.ico",
+        url: "https://bekor.vercel.app/bekor.ico",
       },
     ],
+    alternateLocale: "TAJIKISTAN KHUJAND",
+    emails: "ismoiljon.abdulloev.ibt@gmail.com",
+    determiner: 'the'
   },
   keywords: ["vacancies", "ваканция", "вакансия", "кор"],
 };
