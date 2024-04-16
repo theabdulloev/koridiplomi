@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://bekor.vercel.app",
     title: "BEKOR TJ - Портали ҷойҳои кории холӣ",
-    description: "BEKOR TJ - Портали ҷойҳои кории холӣ",
+    description: "BEKOR TJ - Портали ҷойҳои кории холӣ - Кори дипломии Абдуллоев Исмоилчон Комилчонович 2020-2024 - Донишгоҳи давлатии Хуҷанд ба номи академик Бобоҷон Ғафуров",
     siteName: "BEKOR TJ - Портали ҷойҳои кории холӣ",
     countryName: "TAJIKISTAN DUSHANBE",
     images: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     ],
     alternateLocale: "TAJIKISTAN KHUJAND",
     emails: "ismoiljon.abdulloev.ibt@gmail.com",
-    determiner: 'the'
+    determiner: "the",
   },
   keywords: ["vacancies", "ваканция", "вакансия", "кор"],
 };
