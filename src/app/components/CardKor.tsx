@@ -73,7 +73,7 @@ export default function Kor({
           </Chip>
         </div>
 
-        <div className="pl-0 p-4">{viewContact ? "" : <Button className="w-full" variant="bordered"> {contacts}</Button>}</div>
+        <div className="py-3">{viewContact ? "" : <Button className="w-full" variant="bordered"> {contacts}</Button>}</div>
       </CardBody>
       <Divider />
       <CardFooter className="flex space-x-2 justify-between md:justify-start">
