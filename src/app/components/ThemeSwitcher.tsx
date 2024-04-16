@@ -4,11 +4,14 @@
 import { Button } from "@nextui-org/react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-
+import { Icon } from "@iconify/react";
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-
+  const changeTheme = () => {
+    if (theme == "light") setTheme("dark");
+    else setTheme("light");
+  };
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -17,8 +20,9 @@ export function ThemeSwitcher() {
 
   return (
     <div className="flex gap-3">
-      <Button className="w-full" onClick={() => setTheme("light")}>Light Mode</Button>
-      <Button className="w-full" onClick={() => setTheme("dark")}>Dark Mode</Button>
+      <Button variant="light" className="w-full" onClick={() => changeTheme()}>
+        <Icon fontSize={25} icon="mdi:theme-light-dark" />
+      </Button>
     </div>
   );
 }

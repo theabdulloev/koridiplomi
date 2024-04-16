@@ -56,24 +56,24 @@ export default function Kor({
         <p className="text-2xl">{description}</p>
         <br />
         <div className="w-full flex flex-col lg:justify-start lg:flex-row gap-3 items-start justify-center lg:items-center">
-          <Chip radius="sm" color="success" variant="bordered">
+          <Chip size="lg" radius="sm" color="success" variant="bordered">
             {salary} сомони
           </Chip>
-          <Chip radius="sm" variant="bordered">
+          <Chip size="lg" radius="sm" variant="bordered">
             Можно удалёно
           </Chip>
-          <Chip radius="sm" variant="bordered">
+          <Chip size="lg" radius="sm" variant="bordered">
             Опыт более 6 лет
           </Chip>
-          <Chip radius="sm" variant="bordered">
+          <Chip size="lg" radius="sm" variant="bordered">
             {email}
           </Chip>
-          <Chip radius="sm" variant="bordered">
+          <Chip size="lg" radius="sm" variant="bordered">
             {location}
           </Chip>
         </div>
 
-        <p>{viewContact ? "" : contacts}</p>
+        <div className="pl-0 p-4">{viewContact ? "" : <Button className="w-full" variant="bordered"> {contacts}</Button>}</div>
       </CardBody>
       <Divider />
       <CardFooter className="flex space-x-2 justify-between md:justify-start">

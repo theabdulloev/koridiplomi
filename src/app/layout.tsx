@@ -39,7 +39,6 @@ export const metadata: Metadata = {
 };
 
 import { Providers } from "./providers";
-import { StoreProvider } from "@/store/StoreProvider";
 
 export default function RootLayout({
   children,
@@ -47,24 +46,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <StoreProvider>
-      <html lang="en">
-        <head>
-          <meta
-            name="google-adsense-account"
-            content="ca-pub-9758420922937149"
-          ></meta>
-          <ColorSchemeScript />
-        </head>
-        <body className="w-screen h-screen flex flex-col overflow-x-hidden">
-          <SpeedInsights />
-          <Analytics />
-          <HeaderKor />
-          <MantineProvider>
-            <Providers>{children}</Providers>
-          </MantineProvider>
-        </body>
-      </html>
-    </StoreProvider>
+    <html lang="en">
+      <head>
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-9758420922937149"
+        ></meta>
+        <ColorSchemeScript />
+      </head>
+      <body className="w-screen h-screen flex flex-col overflow-x-hidden">
+        <SpeedInsights />
+        <Analytics />
+        <MantineProvider>
+          <Providers>
+            <HeaderKor />
+            {children}
+          </Providers>
+        </MantineProvider>
+      </body>
+    </html>
   );
 }

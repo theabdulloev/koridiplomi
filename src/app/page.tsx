@@ -1,6 +1,7 @@
 "use server";
 import Kor from "./components/CardKor";
 import Filter from "./components/FilterCompanent";
+
 export default async function Home() {
   const data = [
     {
@@ -67,7 +68,7 @@ export default async function Home() {
   return (
     <main>
       <div className="p-5 text-center uppercase text-2xl">
-        Найдите свою любимую работу{" "}
+        Найдите свою любимую работу{}
         <span className="text-primary">сегодня!</span>
       </div>
       <div className="container mx-auto border grid md:grid-cols-[minmax(200px,_400px)_1fr]">

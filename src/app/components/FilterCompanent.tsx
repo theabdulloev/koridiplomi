@@ -9,17 +9,18 @@ import {
   SliderValue,
 } from "@nextui-org/react";
 import { useState } from "react";
-import { ThemeSwitcher } from "./ThemeSwitcher";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@/store/store";
-import { decrement, increment } from "@/store/slice";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { HiddenFilter } from "../store/atom/store";
 
 export default function Filter() {
   const [selected, setSelected] = useState(["buenos-aires", "sydney"]);
   const [selectedR, setSelectedR] = useState("london");
   const [valueR, setValueR] = useState<SliderValue>([500, 30000]);
-  const count = useSelector((state: RootState) => state.counter.value);
-  const dispatch = useDispatch();
+  const toggle: boolean = useRecoilValue(HiddenFilter);
+  const setToggle = useSetRecoilState(HiddenFilter);
+  const changeHidden = () => {
+    setToggle(() => !toggle);
+  };
   return (
     <div className="space-y-4">
       {/* <div>
@@ -32,64 +33,57 @@ export default function Filter() {
           {Array.isArray(valueR) && valueR.map((b) => `$${b}`).join(" – ")}
         </p>
       </div> */}
-      <div className="border-b">
-        <CheckboxGroup
-          label="Подработка"
-          value={selected}
-          onValueChange={setSelected}
-          defaultValue={["buenos-aires", "london"]}
-        >
-          <Checkbox value="buenos-aires">Неполный день</Checkbox>
-          <Checkbox value="sydney">От 4 часов в день</Checkbox>
-          <Checkbox value="san-francisco">По вечерам</Checkbox>
-          <Checkbox value="london">Разовое задание</Checkbox>
-          <Checkbox value="tokyo">По выходным</Checkbox>
-        </CheckboxGroup>
-      </div>
-      <div className="border-b">
-        <RadioGroup
-          label="Опыт работы"
-          value={selectedR}
-          onValueChange={setSelectedR}
-        >
-          <Radio value="buenos-aires">Не имеет значения</Radio>
-          <Radio value="sydney">От 1 года до 3 лет</Radio>
-          <Radio value="san-francisco">От 3 до 6 лет</Radio>
-          <Radio value="london">Нет опыта</Radio>
-          <Radio value="tokyo">Более 6 лет</Radio>
-        </RadioGroup>
-      </div>
+      {toggle ? (
+        <Button className="w-full" variant="bordered" onClick={changeHidden}>
+          Показать фильтры{" "}
+        </Button>
+      ) : (
+        <div>
+          <Button className="w-full" variant="bordered" onClick={changeHidden}>
+            Скрыть фильтры{" "}
+          </Button>
+          <div className="border-b">
+            <CheckboxGroup
+              label="Подработка"
+              value={selected}
+              onValueChange={setSelected}
+              defaultValue={["buenos-aires", "london"]}
+            >
+              <Checkbox value="buenos-aires">Неполный день</Checkbox>
+              <Checkbox value="sydney">От 4 часов в день</Checkbox>
+              <Checkbox value="san-francisco">По вечерам</Checkbox>
+              <Checkbox value="london">Разовое задание</Checkbox>
+              <Checkbox value="tokyo">По выходным</Checkbox>
+            </CheckboxGroup>
+          </div>
+          <div className="border-b">
+            <RadioGroup
+              label="Опыт работы"
+              value={selectedR}
+              onValueChange={setSelectedR}
+            >
+              <Radio value="buenos-aires">Не имеет значения</Radio>
+              <Radio value="sydney">От 1 года до 3 лет</Radio>
+              <Radio value="san-francisco">От 3 до 6 лет</Radio>
+              <Radio value="london">Нет опыта</Radio>
+              <Radio value="tokyo">Более 6 лет</Radio>
+            </RadioGroup>
+          </div>
 
-      <div className="flex flex-col gap-2 w-full h-full max-w-md items-start justify-center">
-        <Slider
-          label="Уровень дохода"
-          formatOptions={{ style: "currency", currency: "SMN" }}
-          step={100}
-          maxValue={50000}
-          minValue={0}
-          value={valueR}
-          onChange={setValueR}
-          className="max-w-md"
-        />
-      </div>
-      {/* <div>
-        <Button
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          Increment
-        </Button>
-        <span>{count}</span>
-        <Button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          Decrement
-        </Button>
-      </div> */}
-      <div className="self-end-end">
-        <ThemeSwitcher />
-      </div>
+          <div className="flex flex-col gap-2 w-full h-full max-w-md items-start justify-center">
+            <Slider
+              label="Уровень дохода"
+              formatOptions={{ style: "currency", currency: "SMN" }}
+              step={100}
+              maxValue={50000}
+              minValue={0}
+              value={valueR}
+              onChange={setValueR}
+              className="max-w-md"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

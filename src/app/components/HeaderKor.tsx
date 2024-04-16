@@ -13,10 +13,12 @@ import {
 } from "@nextui-org/react";
 import LogoKor from "./Logo";
 import { usePathname } from "next/navigation";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@/store/store";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { HeaderToggle } from "../store/atom/store";
+import { ThemeSwitcher } from "./ThemeSwitcher";
+
 export default function App() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const pathname = usePathname();
   const menuItems = [
     { title: "Соискателям", hrefName: "/" },
@@ -26,12 +28,15 @@ export default function App() {
     { title: "Настройки", hrefName: "/settings" },
     { title: "Выйти", hrefName: "/logout" },
   ];
+  const toggle: boolean = useRecoilValue(HeaderToggle);
+  const setToggleMenu = useSetRecoilState(HeaderToggle);
+  const setIsMenuOpen = () => {
+    setToggleMenu(() => !toggle);
+  };
   return (
-    <Navbar isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+    <Navbar isBordered isMenuOpen={toggle} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent className="sm:hidden" justify="start">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        />
+        <NavbarMenuToggle aria-label={toggle ? "Close menu" : "Open menu"} />
       </NavbarContent>
 
       <NavbarContent className="sm:hidden pr-3" justify="start">
@@ -71,8 +76,8 @@ export default function App() {
           </Link>
         </NavbarItem>
       </NavbarContent>
-
       <NavbarContent justify="end">
+        <ThemeSwitcher />
         <NavbarItem>
           <Button as={Link} color="warning" href="#" variant="flat">
             Войти
