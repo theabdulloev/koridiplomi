@@ -8,7 +8,8 @@ import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 export const metadata: Metadata = {
   title: "BEKOR TJ - Портали ҷойҳои кории холӣ",
-  description: "Кори дипломии Абдуллоев Исмоилчон Комилчонович 2020-2024, Донишгохи Давлатии Хучанд ба номи академик Бобочон Гафуров",
+  description:
+    "Кори дипломии Абдуллоев Исмоилчон Комилчонович 2020-2024, Донишгохи Давлатии Хучанд ба номи академик Бобочон Гафуров",
   authors: [{ name: "Ismoiljon Abdulloev", url: "instagram.com/theabdulloev" }],
   appleWebApp: {
     capable: true,
@@ -17,6 +18,18 @@ export const metadata: Metadata = {
   },
   category: "Vacancies Web-App",
   applicationName: "BEKOR TJ ваканция",
+  openGraph: {
+    type: "website",
+    url: "https://bekor.vercel.app",
+    title: "BEKOR TJ - Портали ҷойҳои кории холӣ",
+    description: "BEKOR TJ - Портали ҷойҳои кории холӣ",
+    siteName: "BEKOR TJ - Портали ҷойҳои кории холӣ",
+    images: [
+      {
+        url: "https://bekor.vercel.app/favicon.ico",
+      },
+    ],
+  },
   keywords: ["vacancies", "ваканция", "вакансия", "кор"],
 };
 
