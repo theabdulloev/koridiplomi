@@ -19,7 +19,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         <NextThemesProvider attribute="class" defaultTheme="light">
           {children}
         </NextThemesProvider>
-        <div className="w-full flex justify-center items-center h-14 text-center sm:h-8">
+        <div className="w-full flex dark:bg-black justify-center items-center h-14 text-center sm:h-8">
           Кори дипломии Абдуллоев Исмоилчон Комилчонович 2020-2024
         </div>
       </NextUIProvider>
