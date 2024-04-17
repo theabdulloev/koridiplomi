@@ -38,11 +38,8 @@ export default function Filter() {
           Показать фильтры{" "}
         </Button>
       ) : (
-        <div>
-          <Button className="w-full" variant="bordered" onClick={changeHidden}>
-            Скрыть фильтры{" "}
-          </Button>
-          <div className="border-b">
+        <div className="space-y-1">
+          <div className="mb-2">
             <CheckboxGroup
               label="Подработка"
               value={selected}
@@ -56,7 +53,7 @@ export default function Filter() {
               <Checkbox value="tokyo">По выходным</Checkbox>
             </CheckboxGroup>
           </div>
-          <div className="border-b">
+          <div className="mb-2">
             <RadioGroup
               label="Опыт работы"
               value={selectedR}
@@ -81,6 +78,9 @@ export default function Filter() {
               onChange={setValueR}
               className="max-w-md"
             />
+          <Button className="w-full" variant="bordered" onClick={changeHidden}>
+            Скрыть фильтры{" "}
+          </Button>
           </div>
         </div>
       )}

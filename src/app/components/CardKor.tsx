@@ -56,19 +56,19 @@ export default function Kor({
         <p className="text-2xl">{description}</p>
         <br />
         <div className="w-full flex flex-col lg:justify-start lg:flex-row gap-3 items-start justify-center lg:items-center">
-          <Button className="w-full" color="success" variant="bordered">
+          <Button fullWidth color="success" variant="bordered">
             {salary} сомони
           </Button>
-          <Button className="w-full" variant="bordered">
+          <Button fullWidth variant="bordered">
             Можно удалёно
           </Button>
-          <Button className="w-full" variant="bordered">
+          <Button fullWidth variant="bordered">
             Опыт более 6 лет
           </Button>
-          <Button className="w-full" variant="bordered">
+          <Button fullWidth variant="bordered">
             {email}
           </Button>
-          <Button className="w-full" variant="bordered">
+          <Button fullWidth variant="bordered">
             {location}
           </Button>
         </div>
