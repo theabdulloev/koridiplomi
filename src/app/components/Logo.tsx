@@ -1,7 +1,8 @@
-export default function LogoKor({
-  WidthLogo = "35pt",
-  ColorLogo = "#fab56f",
-}: any) {
+import { useTheme } from "next-themes";
+
+export default function LogoKor() {
+  const WidthLogo = "35pt";
+  const { theme, setTheme } = useTheme();
   return (
     <svg
       version="1.0"
@@ -13,7 +14,7 @@ export default function LogoKor({
     >
       <g
         transform="translate(0.000000,844.000000) scale(0.100000,-0.100000)"
-        fill={ColorLogo}
+        fill={theme == "dark" ? "#ffffff" : "#000000"}
         stroke="none"
       >
         <path
