@@ -56,24 +56,33 @@ export default function Kor({
         <p className="text-2xl">{description}</p>
         <br />
         <div className="w-full flex flex-col lg:justify-start lg:flex-row gap-3 items-start justify-center lg:items-center">
-          <Chip size="lg" radius="sm" color="success" variant="bordered">
+          <Button className="w-full" color="success" variant="bordered">
             {salary} сомони
-          </Chip>
-          <Chip size="lg" radius="sm" variant="bordered">
+          </Button>
+          <Button className="w-full" variant="bordered">
             Можно удалёно
-          </Chip>
-          <Chip size="lg" radius="sm" variant="bordered">
+          </Button>
+          <Button className="w-full" variant="bordered">
             Опыт более 6 лет
-          </Chip>
-          <Chip size="lg" radius="sm" variant="bordered">
+          </Button>
+          <Button className="w-full" variant="bordered">
             {email}
-          </Chip>
-          <Chip size="lg" radius="sm" variant="bordered">
+          </Button>
+          <Button className="w-full" variant="bordered">
             {location}
-          </Chip>
+          </Button>
         </div>
 
-        <div className="py-3">{viewContact ? "" : <Button className="w-full" variant="bordered"> {contacts}</Button>}</div>
+        <div className="py-3">
+          {viewContact ? (
+            ""
+          ) : (
+            <Button className="w-full" variant="bordered">
+              {" "}
+              {contacts}
+            </Button>
+          )}
+        </div>
       </CardBody>
       <Divider />
       <CardFooter className="flex space-x-2 justify-between md:justify-start">

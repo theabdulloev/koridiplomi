@@ -41,8 +41,8 @@ export default function App() {
 
       <NavbarContent className="sm:hidden pr-3" justify="start">
         <NavbarBrand className="gap-3">
-          <LogoKor />
-          <p className="font-bold dark:text-white text-3xl text-inherit">
+          <LogoKor ColorLogo="#3e6eb8" WidthLogo="35pt" />
+          <p className="font-bold text-[#3e6eb8] text-3xl text-inherit">
             BEKOR TJ
           </p>
         </NavbarBrand>
@@ -50,10 +50,12 @@ export default function App() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand className="gap-3">
-          <LogoKor />
-          <p className="font-bold dark:text-white text-3xl text-inherit">
-            BEKOR TJ
-          </p>
+          <div className="flex items-center gap-3 px-2 rounded-lg">
+            <LogoKor ColorLogo="#3e6eb8" WidthLogo="35pt" />
+            <p className="font-bold text-[#3e6eb8] text-3xl text-inherit">
+              BEKOR TJ
+            </p>
+          </div>
         </NavbarBrand>
         <NavbarItem isActive={pathname == "/"}>
           <Link
@@ -77,7 +79,9 @@ export default function App() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <ThemeSwitcher />
+        <div className="hidden md:block">
+          <ThemeSwitcher />
+        </div>
         <NavbarItem>
           <Button as={Link} color="warning" href="#" variant="flat">
             Войти
