@@ -12,6 +12,7 @@ import {
   Avatar,
   Badge,
 } from "@nextui-org/react";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function Kor({
   userName,
@@ -45,9 +46,10 @@ export default function Kor({
         <div className="w-full flex flex-col">
           <div className="w-full flex justify-between">
             <p className="text-md"> {fullName}</p>
-            <p>Просмотры: {watch}</p>
+            <div className="flex gap-4">
+              <Icon fontSize={25} icon="line-md:watch" /> {watch}
+            </div>
           </div>
-
           <p className="text-small text-default-500">{userName}</p>
         </div>
       </CardHeader>

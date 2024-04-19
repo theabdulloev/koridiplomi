@@ -1,6 +1,9 @@
 "use server";
+import { Input } from "@nextui-org/react";
 import Kor from "../components/CardKor";
 import Filter from "../components/FilterCompanent";
+import { useState } from "react";
+import SearcCompanent from "@/components/Search";
 
 export default async function Home() {
   const data = [
@@ -72,6 +75,7 @@ export default async function Home() {
         <span className="text-primary mr-2">ИМРУЗ</span>
         КОРИ ДУСТДОШТААШОНРО ёбед!
       </div>
+    <SearcCompanent></SearcCompanent>
       <div className="container mx-auto border grid md:grid-cols-[minmax(200px,_400px)_1fr]">
         <div className="border-r p-4">
           <Filter />
