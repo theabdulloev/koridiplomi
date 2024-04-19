@@ -147,3 +147,6 @@ const obj = [
   { label: "Шугнан", value: "Shugnan" },
   { label: "Яван", value: "Yavan" },
 ];
+[
+  {label: "Вазорат",value:"vazorat"}
+]

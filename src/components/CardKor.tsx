@@ -46,7 +46,7 @@ export default function Kor({
         <div className="w-full flex flex-col">
           <div className="w-full flex justify-between">
             <p className="text-md"> {fullName}</p>
-            <div className="flex gap-4">
+            <div className="flex gap-2">
               <Icon fontSize={25} icon="line-md:watch" /> {watch}
             </div>
           </div>

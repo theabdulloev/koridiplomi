@@ -76,9 +76,30 @@ const regions = [
   { label: "Шугнан", value: "Shugnan" },
   { label: "Яван", value: "Yavan" },
 ];
+const categories = [
+  { label: "Вазорат", value: "vazorat" },
+  { label: "Кумита", value: "kumita" },
+  { label: "Агентӣ", value: "agentii" },
+  { label: "КВД", value: "kvd" },
+  { label: "Мақомоти иҷроия", value: "maqomoti_ijroia" },
+  {
+    label: "Шуъбаҳои мақомоти давлатӣ дар маҳал",
+    value: "shuubahoi_maqomoti_davlati_dar_mahal",
+  },
+  { label: "ҶДММ", value: "jdmm" },
+  { label: "ҶСП", value: "jsp" },
+  {
+    label: "Раёсати мақомоти давлатӣ дар маҳал",
+    value: "rayosati_maqomoti_davlati_dar_mahal",
+  },
+  { label: "Соҳибкори инфиродӣ СИ", value: "sohibkori_infirodii_si" },
+  { label: "Ташкилотҳои ҷамъиятӣ ТҶ", value: "tashkilothoi_jamiyati_tj" },
+  { label: "ҶСК", value: "jsk" },
+];
 export default function Create() {
   const [inputValue, setInputValue] = useState("");
   const [value, setValue] = React.useState<Selection>(new Set([]));
+  const [valueCat, setValueCat] = React.useState<Selection>(new Set([]));
   return (
     <div className="container flex flex-col items-center space-y-2 h-full p-4">
       <Input
@@ -97,9 +118,23 @@ export default function Create() {
         className="w-full"
         onSelectionChange={setValue}
       >
-        {regions.map((animal) => (
-          <SelectItem key={animal.value} value={animal.value}>
-            {animal.label}
+        {regions.map((region) => (
+          <SelectItem key={region.value} value={region.value}>
+            {region.label}
+          </SelectItem>
+        ))}
+      </Select>
+      <Select
+        label="Категория"
+        variant="bordered"
+        placeholder="Выберите категорие"
+        selectedKeys={valueCat}
+        className="w-full"
+        onSelectionChange={setValueCat}
+      >
+        {categories.map((categorie) => (
+          <SelectItem key={categorie.value} value={categorie.value}>
+            {categorie.label}
           </SelectItem>
         ))}
       </Select>
