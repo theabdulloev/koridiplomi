@@ -1,6 +1,6 @@
 "use server";
-import Kor from "./components/CardKor";
-import Filter from "./components/FilterCompanent";
+import Kor from "../components/CardKor";
+import Filter from "../components/FilterCompanent";
 
 export default async function Home() {
   const data = [
@@ -8,68 +8,69 @@ export default async function Home() {
       userName: "user5481",
       vip: true,
       fullName: "John Doe",
-      description:
-        "Backend developer and data science enthusiast. Let's explore the world of algorithms together!",
+      description: "Бонкдор - коршиноси қарз дар шаҳри Хуҷанд",
       watch: "1025",
       salary: "5 000",
       contacts: "+992 92 999 99 99",
       email: "email@email.com",
-      location: "Khujand",
+      location: "Худжанд",
     },
     {
       userName: "user9023",
       vip: true,
       fullName: "Alice Smith",
       description:
-        "Mobile app developer and technology geek. Join me in the world of mobile innovation!",
+        "Мутахассис оид ба тасдиқи амалиёти бонкӣ, филиал дар ш.Хуҷанд",
       watch: "1897",
       salary: "12 000",
       contacts: "+992 92 999 99 99",
       email: "email@email.com",
-      location: "Khujand",
+      location: "Худжанд",
     },
     {
       userName: "user17653",
       vip: false,
       fullName: "Emma Johnson",
       description:
-        "Game developer and virtual reality explorer. Embark on an epic gaming journey with me!",
+        "Мутахассиси технологияҳои иттилоотӣ",
       watch: "3245",
       salary: "2 700",
       contacts: "+992 92 999 99 99",
       email: "email@email.com",
-      location: "Khujand",
+      location: "Худжанд",
     },
     {
       userName: "user17652",
       vip: false,
       fullName: "Emma Johnson",
       description:
-        "Game developer and virtual reality explorer. Embark on an epic gaming journey with me!",
+        "Мушовири онлайн дар вакти бегоҳӣ",
       watch: "3245",
       salary: "42 700",
       contacts: "+992 92 999 99 99",
       email: "email@email.com",
-      location: "Khujand",
+      location: "Худжанд",
     },
     {
       userName: "user17651",
       vip: false,
       fullName: "Emma Johnson",
       description:
-        "Game developer and virtual reality explorer. Embark on an epic gaming journey with me!",
+        "Агент барои иҷора, харид ва фурӯши биноҳои истиқоматӣ",
       watch: "3245",
       salary: "1 700",
       contacts: "+992 92 999 99 99",
       email: "email@email.com",
-      location: "Khujand",
+      location: "Худжанд",
     },
+    // Добавьте остальные объекты аналогичным образом
   ];
+
   return (
     <main>
       <div className="p-5 text-center uppercase text-2xl">
-        Найдите свою любимую работу{}
-        <span className="text-primary">сегодня!</span>
+        <span className="text-primary mr-2">ИМРУЗ</span>
+        КОРИ ДУСТДОШТААШОНРО ёбед!
       </div>
       <div className="container mx-auto border grid md:grid-cols-[minmax(200px,_400px)_1fr]">
         <div className="border-r p-4">

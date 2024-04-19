@@ -10,7 +10,7 @@ import {
 } from "@nextui-org/react";
 import { useState } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { HiddenFilter } from "../store/atom/store";
+import { HiddenFilter } from "../app/store/atom/store";
 
 export default function Filter() {
   const [selected, setSelected] = useState(["buenos-aires", "sydney"]);
@@ -34,42 +34,43 @@ export default function Filter() {
         </p>
       </div> */}
       {toggle ? (
+        
         <Button className="w-full" variant="bordered" onClick={changeHidden}>
-          Показать фильтры{" "}
+          Филтрҳоро нишон диҳед{" "}
         </Button>
       ) : (
-        <div className="space-y-1">
+        <div className="space-y-4">
           <div className="mb-2">
             <CheckboxGroup
-              label="Подработка"
+              label="Кори нимавақт"
               value={selected}
               onValueChange={setSelected}
               defaultValue={["buenos-aires", "london"]}
             >
-              <Checkbox value="buenos-aires">Неполный день</Checkbox>
-              <Checkbox value="sydney">От 4 часов в день</Checkbox>
-              <Checkbox value="san-francisco">По вечерам</Checkbox>
-              <Checkbox value="london">Разовое задание</Checkbox>
-              <Checkbox value="tokyo">По выходным</Checkbox>
+              <Checkbox value="buenos-aires">Рӯзи қисман</Checkbox>
+              <Checkbox value="sydney">Аз 4 соат дар як рӯз</Checkbox>
+              <Checkbox value="san-francisco">Дар бегохй</Checkbox>
+              <Checkbox value="london">Вазифаи якдафъаина</Checkbox>
+              <Checkbox value="tokyo">Дар рӯзҳои истироҳат</Checkbox>
             </CheckboxGroup>
           </div>
           <div className="mb-2">
             <RadioGroup
-              label="Опыт работы"
+              label="Тачриба"
               value={selectedR}
               onValueChange={setSelectedR}
             >
-              <Radio value="buenos-aires">Не имеет значения</Radio>
-              <Radio value="sydney">От 1 года до 3 лет</Radio>
-              <Radio value="san-francisco">От 3 до 6 лет</Radio>
-              <Radio value="london">Нет опыта</Radio>
-              <Radio value="tokyo">Более 6 лет</Radio>
+              <Radio value="buenos-aires">Фарқ надорад</Radio>
+              <Radio value="sydney">Аз 1 сол то 3 сол</Radio>
+              <Radio value="san-francisco">Аз 3 то 6 сол</Radio>
+              <Radio value="london">Таҷриба нест</Radio>
+              <Radio value="tokyo">Зиёда аз 6 сол</Radio>
             </RadioGroup>
           </div>
 
           <div className="flex flex-col gap-2 w-full h-full max-w-md items-start justify-center">
             <Slider
-              label="Уровень дохода"
+              label="Сатҳи даромад"
               formatOptions={{ style: "currency", currency: "SMN" }}
               step={100}
               maxValue={50000}
@@ -79,7 +80,7 @@ export default function Filter() {
               className="max-w-md"
             />
           <Button className="w-full" variant="bordered" onClick={changeHidden}>
-            Скрыть фильтры{" "}
+          Филтрҳоро пинҳон кунед{" "}
           </Button>
           </div>
         </div>

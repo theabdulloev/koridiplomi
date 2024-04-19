@@ -14,7 +14,7 @@ import {
 import LogoKor from "./Logo";
 import { usePathname } from "next/navigation";
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { HeaderToggle } from "../store/atom/store";
+import { HeaderToggle } from "../app/store/atom/store";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export default function App() {
@@ -63,7 +63,7 @@ export default function App() {
             color="foreground"
             href="/"
           >
-            Соискателям
+            Корҷу
           </Link>
         </NavbarItem>
         <NavbarItem isActive={pathname == "/employer"}>
@@ -74,7 +74,7 @@ export default function App() {
             href="/employer"
             aria-current="page"
           >
-            Работодателям
+            Корфармо
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -84,7 +84,7 @@ export default function App() {
         </div>
         <NavbarItem>
           <Button as={Link} color="warning" href="#" variant="flat">
-            Войти
+            Ворид шудан
           </Button>
         </NavbarItem>
       </NavbarContent>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import React from "react";
 import "./globals.css";
-import HeaderKor from "./components/HeaderKor";
+import HeaderKor from "../components/HeaderKor";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";

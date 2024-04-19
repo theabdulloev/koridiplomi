@@ -57,13 +57,10 @@ export default function Kor({
         <br />
         <div className="w-full flex flex-col lg:justify-start lg:flex-row gap-3 items-start justify-center lg:items-center">
           <Button fullWidth color="success" variant="bordered">
-            {salary} сомони
+            {salary} сомони / мох.
           </Button>
           <Button fullWidth variant="bordered">
-            Можно удалёно
-          </Button>
-          <Button fullWidth variant="bordered">
-            Опыт более 6 лет
+            Аз 1 сол то 3 сол
           </Button>
           <Button fullWidth variant="bordered">
             {email}
@@ -91,10 +88,10 @@ export default function Kor({
           className="w-full md:w-40"
           variant="ghost"
         >
-          Контакты
+          Раками телефон
         </Button>
         <Button className="w-full md:w-40" color="primary">
-          Откликнуться
+          Тафсилоти бештар
         </Button>
       </CardFooter>
     </Card>

@@ -1,8 +1,8 @@
 import { Button } from "@nextui-org/react";
 import { Metadata } from "next";
 import React from "react";
-import LogoKor from "../components/Logo";
-import EmployerCompanent from "../components/EmployerCompananent";
+import LogoKor from "../../components/Logo";
+import EmployerCompanent from "../../components/EmployerCompananent";
 export const metadata: Metadata = {
   title: "BEKOR TJ - Работодателям",
   description: "Разместите вакансию на BEKOR TJ",
@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 export default function Employer() {
   return (
     <main className="w-full h-screen dark:bg-black flex justify-center flex-col gap-5 items-center">
-
     <EmployerCompanent></EmployerCompanent>
       {/* <Card className="w-1/2 h-1/2">
         <CardHeader className="flex gap-3"></CardHeader>

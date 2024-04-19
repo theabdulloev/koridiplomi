@@ -19,7 +19,7 @@ export default function EmployerCompanent() {
         color="primary"
         variant="solid"
       >
-        Button Link
+        Добавить ваканцию
       </Button>
     </>
   );
