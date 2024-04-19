@@ -8,7 +8,7 @@ export default function EmployerCompanent() {
   return (
     <>
       <div className="text-5xl text-primary flex gap-3 flex-col text-center justify-center items-center">
-        Разместите вакансию на{" "}
+        Дар ин ҷо эълони худро ҷойгир кунед{" "}
         <div className="text-black dark:text-white flex gap-2 justify-center items-center">
           <LogoKor /> BEKOR TJ
         </div>
@@ -19,7 +19,7 @@ export default function EmployerCompanent() {
         color="primary"
         variant="solid"
       >
-        Добавить ваканцию
+        Илова кардани ҷои корӣ
       </Button>
     </>
   );
