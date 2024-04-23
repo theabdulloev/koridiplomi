@@ -160,14 +160,7 @@ export default function Create() {
       </Select>
       <Button
         disabled={salary == "" || desc == "" ? true : false}
-        color={
-          salary == "" ||
-          desc == "" ||
-          region.size == 0 ||
-          categoryValue.size == 0
-            ? "default"
-            : "primary"
-        }
+        color={salary == "" || desc == "" ? "default" : "primary"}
         fullWidth
         onClick={async () => {
           const newdata = await SaveData({
