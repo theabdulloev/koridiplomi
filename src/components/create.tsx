@@ -1,6 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import { Select, Input, SelectItem, Selection } from "@nextui-org/react";
+import {
+  Select,
+  Input,
+  SelectItem,
+  Selection,
+  Button,
+} from "@nextui-org/react";
+import { SaveData } from "@/libs/savedata";
 const regions = [
   { label: "Абдурахман Джами", value: "Abdurahman Jam" },
   { label: "Айни", value: "Ayni" },
@@ -97,15 +104,25 @@ const categories = [
   { label: "ҶСК", value: "jsk" },
 ];
 export default function Create() {
-  const [inputValue, setInputValue] = useState("");
-  const [value, setValue] = React.useState<Selection>(new Set([]));
+  const [salary, setSalary] = useState("");
+  const [desc, setDesc] = useState("");
+  const [region, setRegion] = React.useState<Selection>(new Set([]));
   const [valueCat, setValueCat] = React.useState<Selection>(new Set([]));
   return (
     <div className="container flex flex-col items-center space-y-2 h-full p-4">
       <Input
-        label="Компания"
-        value={inputValue}
-        onValueChange={setInputValue}
+        label="Описание"
+        value={desc}
+        onValueChange={setDesc}
+        description="We'll never share your email with anyone else."
+        errorMessage=""
+        className="w-full"
+      />
+      <Input
+        label="З/П"
+        type="number"
+        value={salary}
+        onValueChange={setSalary}
         description="We'll never share your email with anyone else."
         errorMessage=""
         className="w-full"
@@ -114,9 +131,9 @@ export default function Create() {
         label="Регион"
         variant="bordered"
         placeholder="Выберите регион"
-        selectedKeys={value}
+        selectedKeys={region}
         className="w-full"
-        onSelectionChange={setValue}
+        onSelectionChange={setRegion}
       >
         {regions.map((region) => (
           <SelectItem key={region.value} value={region.value}>
@@ -138,6 +155,15 @@ export default function Create() {
           </SelectItem>
         ))}
       </Select>
+      <Button
+        disabled={salary == "" || desc == "" ? true : false}
+        color={salary == "" || desc == "" ? "default" : "primary"}
+        fullWidth
+        onClick={() => SaveData({ salary, desc, region })}
+        type="submit"
+      >
+        Создать
+      </Button>
     </div>
   );
 }

@@ -42,9 +42,6 @@ export default function App() {
       <NavbarContent className="sm:hidden pr-3" justify="start">
         <NavbarBrand className="gap-3">
           <LogoKor />
-          <p className="font-bold text-black dark:text-white text-3xl text-inherit">
-            BEKOR TJ
-          </p>
         </NavbarBrand>
       </NavbarContent>
 

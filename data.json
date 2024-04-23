@@ -1,0 +1,57 @@
+[
+  {
+    "userName": "user5481",
+    "vip": true,
+    "fullName": "John Doe",
+    "description": "Бонкдор - коршиноси қарз дар шаҳри Хуҷанд",
+    "watch": "1025",
+    "salary": "5 000",
+    "contacts": "+992 92 999 99 99",
+    "email": "email@email.com",
+    "location": "Худжанд"
+  },
+  {
+    "userName": "user9023",
+    "vip": true,
+    "fullName": "Alice Smith",
+    "description": "Мутахассис оид ба тасдиқи амалиёти бонкӣ, филиал дар ш.Хуҷанд",
+    "watch": "1897",
+    "salary": "12 000",
+    "contacts": "+992 92 999 99 99",
+    "email": "email@email.com",
+    "location": "Худжанд"
+  },
+  {
+    "userName": "user17653",
+    "vip": false,
+    "fullName": "Emma Johnson",
+    "description": "Мутахассиси технологияҳои иттилоотӣ",
+    "watch": "3245",
+    "salary": "2 700",
+    "contacts": "+992 92 999 99 99",
+    "email": "email@email.com",
+    "location": "Худжанд"
+  },
+  {
+    "userName": "user17652",
+    "vip": false,
+    "fullName": "Emma Johnson",
+    "description": "Мушовири онлайн дар вакти бегоҳӣ",
+    "watch": "3245",
+    "salary": "42 700",
+    "contacts": "+992 92 999 99 99",
+    "email": "email@email.com",
+    "location": "Худжанд"
+  },
+  {
+    "userName": "user17651",
+    "vip": false,
+    "fullName": "Emma Johnson",
+    "description": "Агент барои иҷора, харид ва фурӯши биноҳои истиқоматӣ",
+    "watch": "3245",
+    "salary": "1 700",
+    "contacts": "+992 92 999 99 99",
+    "email": "email@email.com",
+    "location": "Худжанд"
+  }
+]
