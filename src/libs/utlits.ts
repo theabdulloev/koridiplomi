@@ -1,7 +1,7 @@
 import { env } from "process";
 import { Vacancies } from "./models";
 import mongoose from "mongoose";
-// 
+// mongodb+srv://abdulloev:0CSxryhOnWJEhipW@tojikonbookcl.jsrcsga.mongodb.net/?retryWrites=true&w=majority
 async function main() {
   try {
     await mongoose.connect('mongodb+srv://abdulloev:0CSxryhOnWJEhipW@tojikonbookcl.jsrcsga.mongodb.net/?retryWrites=true&w=majority');
