@@ -8,6 +8,7 @@ import {
   Button,
 } from "@nextui-org/react";
 import { SaveData } from "@/libs/savedata";
+import { toast } from "sonner";
 const regions = [
   { label: "Абдурахман Джами", value: "Abdurahman Jam" },
   { label: "Айни", value: "Ayni" },
@@ -107,7 +108,9 @@ export default function Create() {
   const [salary, setSalary] = useState("");
   const [desc, setDesc] = useState("");
   const [region, setRegion] = React.useState<Selection>(new Set([]));
-  const [valueCat, setValueCat] = React.useState<Selection>(new Set([]));
+  const [categoryValue, setCategoryValue] = React.useState<Selection>(
+    new Set([])
+  );
   return (
     <div className="container flex flex-col items-center space-y-2 h-full p-4">
       <Input
@@ -145,9 +148,9 @@ export default function Create() {
         label="Категория"
         variant="bordered"
         placeholder="Выберите категорие"
-        selectedKeys={valueCat}
+        selectedKeys={categoryValue}
         className="w-full"
-        onSelectionChange={setValueCat}
+        onSelectionChange={setCategoryValue}
       >
         {categories.map((categorie) => (
           <SelectItem key={categorie.value} value={categorie.value}>
@@ -157,9 +160,26 @@ export default function Create() {
       </Select>
       <Button
         disabled={salary == "" || desc == "" ? true : false}
-        color={salary == "" || desc == "" ? "default" : "primary"}
+        color={
+          salary == "" ||
+          desc == "" ||
+          region.size == 0 ||
+          categoryValue.size == 0
+            ? "default"
+            : "primary"
+        }
         fullWidth
-        onClick={() => SaveData({ salary, desc, region })}
+        onClick={async () => {
+          const newdata = await SaveData({
+            salary,
+            desc,
+            region,
+            categoryValue,
+          });
+          toast.success("Success");
+          console.log(newdata);
+          return newdata;
+        }}
         type="submit"
       >
         Создать

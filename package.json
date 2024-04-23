@@ -28,7 +28,8 @@
     "node-telegram-bot-api": "^0.65.1",
     "react": "^18",
     "react-dom": "^18",
-    "recoil": "^0.7.7"
+    "recoil": "^0.7.7",
+    "sonner": "^1.4.41"
   },
   "devDependencies": {
     "@iconify/react": "^4.1.1",

@@ -24,6 +24,11 @@ import { usePathname } from "next/navigation";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { HeaderToggle } from "../app/store/atom/store";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import { toast } from "sonner";
+setTimeout(() => {
+  toast('My toast on a page load');
+});
+
 
 export default function App() {
   // const [isMenuOpen, setIsMenuOpen] = React.useState(false);

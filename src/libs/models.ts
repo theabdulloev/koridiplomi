@@ -6,7 +6,6 @@ const vacanciesSchema = new Schema(
     userName: {
       type: String,
       required: true,
-      unique: true,
       min: 3,
       max: 20,
     },
@@ -22,4 +21,4 @@ const vacanciesSchema = new Schema(
   { timestamps: true }
 );
 export const Vacancies =
-  mongoose.models.Vacancies || mongoose.model("Vacancies", vacanciesSchema);
+  mongoose?.models?.Vacancies || mongoose.model("Vacancies", vacanciesSchema);
