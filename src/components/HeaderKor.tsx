@@ -10,6 +10,14 @@ import {
   NavbarItem,
   Link,
   Button,
+  ModalFooter,
+  Checkbox,
+  Input,
+  ModalBody,
+  ModalHeader,
+  Modal,
+  ModalContent,
+  useDisclosure,
 } from "@nextui-org/react";
 import LogoKor from "./Logo";
 import { usePathname } from "next/navigation";
@@ -19,6 +27,7 @@ import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export default function App() {
   // const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const pathname = usePathname();
   const menuItems = [
     { title: "Соискателям", hrefName: "/" },
@@ -34,78 +43,123 @@ export default function App() {
     setToggleMenu(() => !toggle);
   };
   return (
-    <Navbar isBordered isMenuOpen={toggle} onMenuOpenChange={setIsMenuOpen}>
-      <NavbarContent className="sm:hidden" justify="start">
-        <NavbarMenuToggle aria-label={toggle ? "Close menu" : "Open menu"} />
-      </NavbarContent>
+    <>
+      <Navbar isBordered isMenuOpen={toggle} onMenuOpenChange={setIsMenuOpen}>
+        <NavbarContent className="sm:hidden" justify="start">
+          <NavbarMenuToggle aria-label={toggle ? "Close menu" : "Open menu"} />
+        </NavbarContent>
 
-      <NavbarContent className="sm:hidden pr-3" justify="start">
-        <NavbarBrand className="gap-3">
-          <LogoKor />
-        </NavbarBrand>
-      </NavbarContent>
-
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarBrand className="gap-3">
-          <div className="flex items-center gap-3 px-2 rounded-lg">
+        <NavbarContent className="sm:hidden pr-3" justify="start">
+          <NavbarBrand className="gap-3">
             <LogoKor />
-            <p className="font-bold text-black dark:text-white text-3xl text-inherit">
-              BEKOR TJ
-            </p>
-          </div>
-        </NavbarBrand>
-        <NavbarItem isActive={pathname == "/"}>
-          <Link
-            className={pathname == "/" ? "text-primary" : "text-foreground"}
-            color="foreground"
-            href="/"
-          >
-            Корҷу
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive={pathname == "/employer"}>
-          <Link
-            className={
-              pathname == "/employer" ? "text-primary" : "text-foreground"
-            }
-            href="/employer"
-            aria-current="page"
-          >
-            Корфармо
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <div className="hidden md:block">
-          <ThemeSwitcher />
-        </div>
-        <NavbarItem>
-          <Button as={Link} color="warning" href="#" variant="flat">
-            Ворид шудан
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
+          </NavbarBrand>
+        </NavbarContent>
 
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+        <NavbarContent className="hidden sm:flex gap-4" justify="center">
+          <NavbarBrand className="gap-3">
+            <div className="flex items-center gap-3 px-2 rounded-lg">
+              <LogoKor />
+              <p className="font-bold text-black dark:text-white text-3xl text-inherit">
+                BEKOR TJ
+              </p>
+            </div>
+          </NavbarBrand>
+          <NavbarItem isActive={pathname == "/"}>
             <Link
-              className="w-full"
-              color={
-                index === 2
-                  ? "warning"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              href={item.hrefName}
-              size="lg"
+              className={pathname == "/" ? "text-primary" : "text-foreground"}
+              color="foreground"
+              href="/"
             >
-              {item.title}
+              Корҷу
             </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
-    </Navbar>
+          </NavbarItem>
+          <NavbarItem isActive={pathname == "/employer"}>
+            <Link
+              className={
+                pathname == "/employer" ? "text-primary" : "text-foreground"
+              }
+              href="/employer"
+              aria-current="page"
+            >
+              Корфармо
+            </Link>
+          </NavbarItem>
+        </NavbarContent>
+        <NavbarContent justify="end">
+          <div className="hidden md:block">
+            <ThemeSwitcher />
+          </div>
+          <NavbarItem>
+            <Button onPress={onOpen} color="warning" variant="flat">
+              Ворид шудан
+            </Button>
+          </NavbarItem>
+        </NavbarContent>
+
+        <NavbarMenu>
+          {menuItems.map((item, index) => (
+            <NavbarMenuItem key={`${item}-${index}`}>
+              <Link
+                className="w-full"
+                color={
+                  index === 2
+                    ? "warning"
+                    : index === menuItems.length - 1
+                    ? "danger"
+                    : "foreground"
+                }
+                href={item.hrefName}
+                size="lg"
+              >
+                {item.title}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
+      </Navbar>
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="top-center">
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">Даромадан</ModalHeader>
+              <ModalBody>
+                <Input
+                  autoFocus
+                  label="Email"
+                  placeholder="Почтаи электронии худро ворид кунед"
+                  variant="bordered"
+                />
+                <Input
+                  label="Рамз"
+                  placeholder="Рамзи худро ворид кунед"
+                  type="password"
+                  variant="bordered"
+                />
+                <div className="flex py-2 px-1 justify-between">
+                  <Checkbox
+                    classNames={{
+                      label: "text-small",
+                    }}
+                  >
+                    Маро дар ёд дор
+                  </Checkbox>
+                  <Link color="primary" href="#" size="sm">
+                    Калидвожа фаромӯш шуд?
+                  </Link>
+                </div>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="flat" onPress={onClose}>
+                  Close
+                </Button>
+                <Button color="primary" onPress={onClose}>
+                  Ворид шудан
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+    </>
   );
 }

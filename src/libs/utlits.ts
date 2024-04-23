@@ -7,8 +7,8 @@ async function main() {
     await mongoose.connect(env.MONGODB);
     console.log("mongodb connected");
     // const testCol = mongoose.db().collection()
-    // await client.db().createCollection('testCole')
-    // await Vacancies.createCollection()
+    // await client.db().createCollection('B')
+    await Vacancies.createCollection()
   } catch (error) {
     console.log(error);
   }
