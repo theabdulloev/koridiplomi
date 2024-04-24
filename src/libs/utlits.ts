@@ -5,13 +5,13 @@ const test = async () => {
   const { rows } = await sql`SELECT * FROM posts WHERE likes > ${likes};`;
   console.log(rows, "rows vercel database");
 };
-test();
+
 import { Vacancies } from "./models";
 import mongoose from "mongoose";
 // mongodb+srv://abdulloev:0CSxryhOnWJEhipW@tojikonbookcl.jsrcsga.mongodb.net/?retryWrites=true&w=majority
 async function main() {
   try {
-    await mongoose.connect("mongodb://127.0.0.1:27017/admin");
+    await mongoose.connect("mongodb+srv://abdulloev:0CSxryhOnWJEhipW@tojikonbookcl.jsrcsga.mongodb.net/?retryWrites=true&w=majority");
     console.log("mongodb connected");
     // const testCol = mongoose.db().collection()
     // await client.db().createCollection('B')
