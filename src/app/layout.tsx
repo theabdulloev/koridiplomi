@@ -39,6 +39,7 @@ export const metadata: Metadata = {
 };
 
 import { Providers } from "./providers";
+import Back from "@/components/back";
 
 export default function RootLayout({
   children,
@@ -58,11 +59,12 @@ export default function RootLayout({
         />
         <ColorSchemeScript />
       </head>
-      <body className="w-screen h-screen flex flex-col overflow-x-hidden">
+      <body className="w-screen  flex flex-col overflow-x-hidden">
         <SpeedInsights />
         <Analytics />
         <MantineProvider>
           <Providers>
+            <Back></Back>
             <HeaderKor />
             {children}
           </Providers>

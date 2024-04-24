@@ -27,7 +27,7 @@ export default function Kor({
 }: any) {
   const [viewContact, setViewContact] = useState(true);
   return (
-    <Card className="w-full min-h-60">
+    <Card className="w-full  bg-transparent backdrop-blur-3xl min-h-60">
       <CardHeader className="flex gap-3">
         <div className="w-10 h-10">
           {vip ? (
