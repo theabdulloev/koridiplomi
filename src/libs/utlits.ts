@@ -1,10 +1,19 @@
 import { env } from "process";
+import { sql } from "@vercel/postgres";
+const test = async () => {
+  const likes = 100;
+  const { rows } = await sql`SELECT * FROM posts WHERE likes > ${likes};`;
+  console.log(rows,'rows vercel database')
+};
+test()
 import { Vacancies } from "./models";
 import mongoose from "mongoose";
 // mongodb+srv://abdulloev:0CSxryhOnWJEhipW@tojikonbookcl.jsrcsga.mongodb.net/?retryWrites=true&w=majority
 async function main() {
   try {
-    await mongoose.connect('mongodb+srv://abdulloev:0CSxryhOnWJEhipW@tojikonbookcl.jsrcsga.mongodb.net/?retryWrites=true&w=majority');
+    await mongoose.connect(
+      "mongodb+srv://abdulloev:0CSxryhOnWJEhipW@tojikonbookcl.jsrcsga.mongodb.net/?retryWrites=true&w=majority"
+    );
     console.log("mongodb connected");
     // const testCol = mongoose.db().collection()
     // await client.db().createCollection('B')

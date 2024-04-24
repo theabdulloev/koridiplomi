@@ -52,6 +52,10 @@ export default function RootLayout({
           name="google-adsense-account"
           content="ca-pub-9758420922937149"
         ></meta>
+        <meta
+          name="google-site-verification"
+          content="TY52qt7axMYAHDvC9xNbeZvTQlngPkvE6wWR5uzdtqk"
+        />
         <ColorSchemeScript />
       </head>
       <body className="w-screen h-screen flex flex-col overflow-x-hidden">
