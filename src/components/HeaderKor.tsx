@@ -93,12 +93,14 @@ export default function App() {
           </NavbarItem>
           <NavbarItem>
             <Button
-              onClick={() => {
-                console.log("...start public")
-                const data = publicInstagram();
-                console.log(data)
+              onClick={async () => {
+                console.log("...start public");
+                const data = await publicInstagram();
+                console.log(data);
               }}
-            >+</Button>
+            >
+              +
+            </Button>
           </NavbarItem>
         </NavbarContent>
 
