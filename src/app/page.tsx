@@ -3,9 +3,11 @@ import Kor from "../components/CardKor";
 import Filter from "../components/FilterCompanent";
 import SearcCompanent from "@/components/Search";
 import { GetData } from "@/libs/utlits";
+import ToPop from "@/components/totop";
 
 export default async function Home() {
   const data: [] = await GetData();
+  
   return (
     <main>
       <div className="p-5 text-center uppercase text-2xl">
@@ -21,7 +23,7 @@ export default async function Home() {
           {/* {arr.map(i => <Kor />)} */}
 
           <KORTJ data={data}></KORTJ>
-
+          <ToPop></ToPop>
           {/* <Kor
           userName="username"
           fullName="Tom Bom"
