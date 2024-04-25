@@ -64,7 +64,7 @@ export default function RootLayout({
         <Analytics />
         <MantineProvider>
           <Providers>
-            <Back></Back>
+            {/* <Back></Back> */}
             <HeaderKor />
             {children}
           </Providers>

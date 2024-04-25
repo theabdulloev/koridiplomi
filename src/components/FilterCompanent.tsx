@@ -11,6 +11,7 @@ import {
 import { useState } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { HiddenFilter } from "../app/store/atom/store";
+import { useViewportSize } from "@mantine/hooks";
 
 export default function Filter() {
   const [selected, setSelected] = useState(["buenos-aires", "sydney"]);
@@ -21,6 +22,7 @@ export default function Filter() {
   const changeHidden = () => {
     setToggle(() => !toggle);
   };
+  
   return (
     <div className="space-y-4">
       {/* <div>

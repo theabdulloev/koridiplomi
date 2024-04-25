@@ -25,7 +25,7 @@ export default function ProfileCompanent() {
         <div className="w-full container h-full space-y-2 mx-auto p-4">
           <p>Ismoiljon Abdulloev</p>
           <p className="text-gray-500">@theabdulloev</p>
-          <div className="space-x-2">
+          <div className="space-x-2 space-y-2">
             <Chip>Front-end developer</Chip>
             <Chip>Back-end developer</Chip>
             <Chip>UX - UI designer</Chip>

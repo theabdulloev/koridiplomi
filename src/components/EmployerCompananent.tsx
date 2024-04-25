@@ -1,14 +1,12 @@
 "use client";
 import { Button } from "@nextui-org/react";
-import { useRouter } from "next/router";
-import LogoKor from "./Logo";
 import Link from "next/link";
 import Typewriter from "typewriter-effect";
 export default function EmployerCompanent() {
   return (
     <>
-      <div className="text-5xl flex gap-3 flex-col items-center">
-        <div className="text-black w-full px-5 flex gap-2">
+      <div className="text-5xl flex gap-3 flex-col items-center justify-center min-h-96 container mx-auto">
+        <div className="text-black w-full px-5 flex gap-2 dark:text-white" >
           <Typewriter
             options={{
               strings: [

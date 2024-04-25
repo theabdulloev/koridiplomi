@@ -10,18 +10,7 @@ import {
   NavbarItem,
   Link,
   Button,
-  ModalFooter,
-  Checkbox,
-  Tabs,
-  Input,
-  CardBody,
-  ModalBody,
-  ModalHeader,
-  Modal,
-  ModalContent,
   useDisclosure,
-  Tab,
-  Card,
 } from "@nextui-org/react";
 import LogoKor from "./Logo";
 import { usePathname } from "next/navigation";
@@ -29,13 +18,12 @@ import { useRecoilValue, useSetRecoilState } from "recoil";
 import { HeaderToggle } from "../app/store/atom/store";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { toast } from "sonner";
+import { useViewportSize } from '@mantine/hooks';
 setTimeout(() => {
   toast("My toast on a page load");
 });
 
 export default function App() {
-  // const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const pathname = usePathname();
   const menuItems = [
     { title: "Соискателям", hrefName: "/" },
@@ -50,7 +38,6 @@ export default function App() {
   const setIsMenuOpen = () => {
     setToggleMenu(() => !toggle);
   };
-  const [selected, setSelected] = React.useState<string | number>("login");
   return (
     <>
       <Navbar isBordered isMenuOpen={toggle} onMenuOpenChange={setIsMenuOpen}>
@@ -99,9 +86,9 @@ export default function App() {
             <ThemeSwitcher />
           </div>
           <NavbarItem>
-            <Button onPress={onOpen} color="warning" variant="flat">
+            <Link isBlock  href="/login" color="warning">
               Ворид шудан
-            </Button>
+            </Link>
           </NavbarItem>
         </NavbarContent>
 
@@ -126,123 +113,6 @@ export default function App() {
           ))}
         </NavbarMenu>
       </Navbar>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="top-center">
-        <ModalContent>
-          {(onClose) => (
-            <>
-              <ModalHeader className="flex flex-col text-center dark:text-white gap-1">
-                BEKOR TJ
-              </ModalHeader>
-              <ModalBody>
-                {/* <Input
-                  label="Email"
-                  placeholder="Почтаи электронии худро ворид кунед"
-                  variant="bordered"
-                />
-                <Input
-                  label="Рамз"
-                  placeholder="Рамзи худро ворид кунед"
-                  type="password"
-                  variant="bordered"
-                />
-                <div className="flex py-2 px-1 justify-between">
-                  <Checkbox
-                    classNames={{
-                      label: "text-small",
-                    }}
-                  >
-                    Маро дар ёд дор
-                  </Checkbox>
-                  <Link color="primary" href="#" size="sm">
-                    Калидвожа фаромӯш шуд?
-                  </Link>
-                </div> */}
-                <div className="flex flex-col w-full">
-                  <Tabs
-                    fullWidth
-                    size="md"
-                    aria-label="Tabs form"
-                    selectedKey={selected}
-                    onSelectionChange={setSelected}
-                  >
-                    <Tab key="login" title="Ворид шудан">
-                      <form className="flex flex-col gap-4">
-                        <Input
-                          isRequired
-                          label="Email"
-                          placeholder="Почтаи электронии худро ворид кунед"
-                          type="email"
-                        />
-                        <Input
-                          isRequired
-                          label="Password"
-                          placeholder="Рамзи худро ворид кунед"
-                          type="password"
-                        />
-                        {/* <p className="text-center text-small">
-                          Need to create an account?{" "}
-                          <Link
-                            size="sm"
-                            onPress={() => setSelected("sign-up")}
-                          >
-                            Sign up
-                          </Link>
-                        </p> */}
-                        <div className="flex gap-2 justify-end">
-                          <Button fullWidth color="primary">
-                            Ворид шудан
-                          </Button>
-                        </div>
-                      </form>
-                    </Tab>
-                    <Tab key="sign-up" title="Аз қайд гузаштан">
-                      <form className="flex flex-col gap-4 h-[300px]">
-                        <Input
-                          isRequired
-                          label="Ном"
-                          placeholder="Номи худро ворид кунед"
-                          type="password"
-                        />
-                        <Input
-                          isRequired
-                          label="Email"
-                          placeholder="Почтаи электронии худро ворид кунед"
-                          type="email"
-                        />
-                        <Input
-                          isRequired
-                          label="Password"
-                          placeholder="Рамзи худро ворид кунед"
-                          type="password"
-                        />
-                        {/* <p className="text-center text-small">
-                          Already have an account?{" "}
-                          <Link size="sm" onPress={() => setSelected("login")}>
-                            Ворид шудан
-                          </Link>
-                        </p> */}
-                        <div className="flex gap-2 justify-end">
-                          <Button fullWidth color="primary">
-                            Аз қайд гузаштан
-                          </Button>
-                        </div>
-                      </form>
-                    </Tab>
-                  </Tabs>
-                </div>
-              </ModalBody>
-              {/* <ModalFooter>
-                <Button color="danger" variant="flat" onPress={onClose}>
-                  Close
-                </Button>
-                <Button color="primary" onPress={onClose}>
-                  Ворид шудан
-                </Button>
-              </ModalFooter> */}
-            </>
-          )}
-        </ModalContent>
-      </Modal>
     </>
   );
 }

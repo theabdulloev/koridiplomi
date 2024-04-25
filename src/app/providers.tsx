@@ -13,7 +13,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <RecoilRoot>
       <NextUIProvider
-        className="w-full bg-black"
+        className="w-full light dark:dark text-foreground bg-background"
         navigate={router.push}
       >
         <NextThemesProvider attribute="class" defaultTheme="light">
