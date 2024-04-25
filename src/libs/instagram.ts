@@ -15,4 +15,5 @@ export default async function publicInstagram() {
   const photo = "https://bekor.vercel.app/open-space-office.jpg";
   await client.uploadPhoto({ photo, caption: "Post from api", post: "feed" });
   toast("Upload Photo to Instagram");
+  return profile;
 }
