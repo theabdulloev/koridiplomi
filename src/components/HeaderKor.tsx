@@ -18,7 +18,8 @@ import { useRecoilValue, useSetRecoilState } from "recoil";
 import { HeaderToggle } from "../app/store/atom/store";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { toast } from "sonner";
-import { useViewportSize } from '@mantine/hooks';
+import { useViewportSize } from "@mantine/hooks";
+import publicInstagram from "@/libs/instagram";
 setTimeout(() => {
   toast("My toast on a page load");
 });
@@ -86,9 +87,18 @@ export default function App() {
             <ThemeSwitcher />
           </div>
           <NavbarItem>
-            <Link isBlock  href="/login" color="warning">
+            <Link isBlock href="/login" color="warning">
               Ворид шудан
             </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Button
+              onClick={() => {
+                console.log("...start public")
+                const data = publicInstagram();
+                console.log(data)
+              }}
+            ></Button>
           </NavbarItem>
         </NavbarContent>
 
