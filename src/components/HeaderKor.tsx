@@ -98,7 +98,7 @@ export default function App() {
                 const data = publicInstagram();
                 console.log(data)
               }}
-            ></Button>
+            >+</Button>
           </NavbarItem>
         </NavbarContent>
 
