@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     countryName: "TAJIKISTAN DUSHANBE",
     images: [
       {
-        url: "https://bekor.vercel.app/logoEdit.png",
+        url: "https://bekor.vercel.app/logoAbdulloev.jpg",
       },
     ],
     alternateLocale: "TAJIKISTAN KHUJAND",

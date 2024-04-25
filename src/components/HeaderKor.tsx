@@ -9,8 +9,6 @@ import {
   NavbarContent,
   NavbarItem,
   Link,
-  Button,
-  useDisclosure,
 } from "@nextui-org/react";
 import LogoKor from "./Logo";
 import { usePathname } from "next/navigation";
@@ -18,8 +16,6 @@ import { useRecoilValue, useSetRecoilState } from "recoil";
 import { HeaderToggle } from "../app/store/atom/store";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { toast } from "sonner";
-import { useViewportSize } from "@mantine/hooks";
-import publicInstagram from "@/libs/instagram";
 setTimeout(() => {
   toast("My toast on a page load");
 });
