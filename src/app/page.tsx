@@ -4,6 +4,18 @@ import Filter from "../components/FilterCompanent";
 import SearcCompanent from "@/components/Search";
 import { GetData } from "@/libs/utlits";
 import ToPop from "@/components/totop";
+const Instagram = require("instagram-web-api");
+const username = "abdulloevcompany",
+  password = "928663323taj";
+
+const client = new Instagram({ username, password });
+
+(async () => {
+  await client.login();
+  const profile = await client.getProfile();
+    console.log('data from instagram')
+  console.log(profile);
+})();
 
 export default async function Home() {
   const data: [] = await GetData();
