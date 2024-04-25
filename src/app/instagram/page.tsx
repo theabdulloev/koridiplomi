@@ -2,7 +2,7 @@
 import publicInstagram from "@/libs/instagram";
 import { Button } from "@nextui-org/react";
 
-export default function Instagram() {
+export default async function Instagram() {
   return (
     <>
       <Button
