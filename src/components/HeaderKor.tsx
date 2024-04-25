@@ -91,17 +91,6 @@ export default function App() {
               Ворид шудан
             </Link>
           </NavbarItem>
-          <NavbarItem>
-            <Button
-              onClick={async () => {
-                console.log("...start public");
-                const data = await publicInstagram();
-                console.log(data);
-              }}
-            >
-              +
-            </Button>
-          </NavbarItem>
         </NavbarContent>
 
         <NavbarMenu>
