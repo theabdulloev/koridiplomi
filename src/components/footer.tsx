@@ -12,8 +12,6 @@ import { useState } from "react";
 
 export default function Footer() {
   const pathname = route.usePathname();
-  const para = route.useSearchParams()
-  console.log(para);
   const [selected, setSelected] = useState("main");
   console.log(pathname);
   return (
