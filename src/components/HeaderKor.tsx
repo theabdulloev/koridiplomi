@@ -3,9 +3,6 @@ import React from "react";
 import {
   Navbar,
   NavbarBrand,
-  NavbarMenuToggle,
-  NavbarMenuItem,
-  NavbarMenu,
   NavbarContent,
   NavbarItem,
   Link,
@@ -22,14 +19,6 @@ setTimeout(() => {
 
 export default function App() {
   const pathname = usePathname();
-  const menuItems = [
-    { title: "Соискателям", hrefName: "/" },
-    { title: "Работодателям", hrefName: "/employer" },
-    { title: "Профиль", hrefName: "/profile" },
-    { title: "Помощь", hrefName: "/help" },
-    { title: "Настройки", hrefName: "/settings" },
-    { title: "Выйти", hrefName: "/logout" },
-  ];
   const toggle: boolean = useRecoilValue(HeaderToggle);
   const setToggleMenu = useSetRecoilState(HeaderToggle);
   const setIsMenuOpen = () => {
@@ -38,13 +27,12 @@ export default function App() {
   return (
     <>
       <Navbar isBordered isMenuOpen={toggle} onMenuOpenChange={setIsMenuOpen}>
-        <NavbarContent className="sm:hidden" justify="start">
-          <NavbarMenuToggle aria-label={toggle ? "Close menu" : "Open menu"} />
-        </NavbarContent>
-
         <NavbarContent className="sm:hidden pr-3" justify="start">
           <NavbarBrand className="gap-3">
             <LogoKor />
+            <p className="font-bold text-black dark:text-white text-3xl text-inherit">
+              BEKOR TJ
+            </p>
           </NavbarBrand>
         </NavbarContent>
 
@@ -69,7 +57,10 @@ export default function App() {
           <NavbarItem isActive={pathname == "/employer"}>
             <Link
               className={
-                pathname == "/employer" ? "text-primary" : "text-foreground"
+                pathname == "/employer" ||
+                pathname == "/employer/createvacancies"
+                  ? "text-primary"
+                  : "text-foreground"
               }
               href="/employer"
               aria-current="page"
@@ -88,27 +79,6 @@ export default function App() {
             </Link>
           </NavbarItem>
         </NavbarContent>
-
-        <NavbarMenu>
-          {menuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                className="w-full"
-                color={
-                  index === 2
-                    ? "warning"
-                    : index === menuItems.length - 1
-                    ? "danger"
-                    : "foreground"
-                }
-                href={item.hrefName}
-                size="lg"
-              >
-                {item.title}
-              </Link>
-            </NavbarMenuItem>
-          ))}
-        </NavbarMenu>
       </Navbar>
     </>
   );

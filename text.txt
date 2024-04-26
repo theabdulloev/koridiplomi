@@ -222,3 +222,79 @@ const obj = [
 //     - Вебсайт: React Native Express (https://www.reactnative.express/)
 
 // Ин захираҳо барои омӯхтани ин мавзӯъҳо захираҳо ва ғояҳои иловагӣ медиҳанд. Ин захираҳоро дар омӯзиши худ истифода баред ва он чизеро, ки омӯхтаед, дар амал татбиқ кунед.
+export default function Create() {
+  const [salary, setSalary] = useState("");
+  const [desc, setDesc] = useState("");
+  const [region, setRegion] = React.useState<Selection>(new Set([]));
+  const [categoryValue, setCategoryValue] = React.useState<Selection>(
+    new Set([])
+  );
+  return (
+    <div className="container flex flex-col items-center space-y-2 h-full p-4">
+      <Input
+        label="Описание"
+        value={desc}
+        onValueChange={setDesc}
+        description="We'll never share your email with anyone else."
+        errorMessage=""
+        className="w-full"
+      />
+      <Input
+        label="З/П"
+        type="number"
+        value={salary}
+        onValueChange={setSalary}
+        description="We'll never share your email with anyone else."
+        errorMessage=""
+        className="w-full"
+      />
+      <Select
+        label="Регион"
+        variant="bordered"
+        placeholder="Выберите регион"
+        selectedKeys={region}
+        className="w-full"
+        onSelectionChange={setRegion}
+      >
+        {regions.map((region) => (
+          <SelectItem key={region.value} value={region.value}>
+            {region.label}
+          </SelectItem>
+        ))}
+      </Select>
+      <Select
+        label="Категория"
+        variant="bordered"
+        placeholder="Выберите категорие"
+        selectedKeys={categoryValue}
+        className="w-full"
+        onSelectionChange={setCategoryValue}
+      >
+        {categories.map((categorie) => (
+          <SelectItem key={categorie.value} value={categorie.value}>
+            {categorie.label}
+          </SelectItem>
+        ))}
+      </Select>
+      <Button
+        disabled={salary == "" || desc == "" ? true : false}
+        color={salary == "" || desc == "" ? "default" : "primary"}
+        fullWidth
+        onClick={async () => {
+          const newdata = await SaveData({
+            salary,
+            desc,
+            region,
+            categoryValue,
+          });
+          toast.success("Success");
+          console.log(newdata);
+          return newdata;
+        }}
+        type="submit"
+      >
+        Создать
+      </Button>
+    </div>
+  );
+}
