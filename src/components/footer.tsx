@@ -1,15 +1,8 @@
 "use client";
-import {
-  Tab,
-  Tabs,
-} from "@nextui-org/react";
+import { Tab, Tabs } from "@nextui-org/react";
 import * as route from "next/navigation";
 export default function Footer() {
   const pathname = route.usePathname();
-<<<<<<< HEAD
-=======
-  const [selected, setSelected] = useState("main");
->>>>>>> a0bc1f29556537ef1eb353925080d02ccfa8dd0d
   console.log(pathname);
   return (
     <main className="sm:hidden">
