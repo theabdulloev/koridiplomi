@@ -1,5 +1,4 @@
 import KORTJ from "@/components/comm";
-import Kor from "../components/CardKor";
 import Filter from "../components/FilterCompanent";
 import SearcCompanent from "@/components/Search";
 import { GetData } from "@/libs/utlits";
