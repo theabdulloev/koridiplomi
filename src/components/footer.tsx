@@ -1,21 +1,66 @@
 "use client";
-import { Tab, Tabs } from "@nextui-org/react";
+import { Icon } from "@iconify/react/dist/iconify.js";
+import { Button, ButtonGroup } from "@nextui-org/react";
+import Link from "next/link";
 import * as route from "next/navigation";
 export default function Footer() {
   const pathname = route.usePathname();
-  console.log(pathname);
   return (
-    <main className="sm:hidden">
-      <Tabs
-        size="lg"
+    <main className="sm:hidden w-full fixed bottom-0 z-50 bg-white">
+      <ButtonGroup
+        variant="light"
+        className="text-teal-500"
         fullWidth
-        className="fixed bottom-0"
-        selectedKey={pathname}
+        radius="none"
       >
-        <Tab key="/" title="Асоси" href="/"></Tab>
-        <Tab key="/employer" title="Корфармо" href="/employer"></Tab>
-        <Tab key="/profile" title="Профил" href="/profile"></Tab>
-      </Tabs>
+        <Button
+          className={
+            pathname == "/" ? "flex flex-col text-teal-500" : "flex flex-col"
+          }
+          href="/"
+          as={Link}
+          color={pathname == "/" ? "danger" : "default"}
+        >
+          <Icon fontSize={25} icon="iconoir:home" />
+          Асосӣ
+        </Button>
+        <Button
+          href="/employer"
+          as={Link}
+          className={
+            pathname == "/employer" || pathname == "/employer/createvacancies"
+              ? "flex flex-col text-teal-500"
+              : "flex flex-col"
+          }
+        >
+          <Icon fontSize={25} icon="iconoir:add-circle" />
+          Корфармо
+        </Button>
+        <Button
+          href="/notification"
+          as={Link}
+          className={
+            pathname == "/notification"
+              ? "flex flex-col text-teal-500"
+              : "flex flex-col"
+          }
+        >
+          <Icon fontSize={25} icon="iconoir:bell-notification" />
+          Огоҳинома
+        </Button>
+        <Button
+          href="/profile"
+          as={Link}
+          className={
+            pathname == "/profile"
+              ? "flex flex-col text-teal-500"
+              : "flex flex-col"
+          }
+        >
+          <Icon fontSize={25} icon="iconamoon:profile" />
+          Профил
+        </Button>
+      </ButtonGroup>
     </main>
   );
 }

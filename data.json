@@ -1,57 +1,62 @@
 [
   {
-    "userName": "user5481",
+    "userName": "theabdulloev",
     "vip": true,
-    "fullName": "John Doe",
+    "fullName": "Ismoiljon Abdulloev",
     "description": "Бонкдор - коршиноси қарз дар шаҳри Хуҷанд",
     "watch": "1025",
     "salary": "5 000",
-    "contacts": "+992 92 999 99 99",
-    "email": "email@email.com",
-    "location": "Худжанд"
+    "contacts": "+992 97 809 23 23",
+    "email": "ismoiljon.abdulloev.ibt@email.com",
+    "location": "Хуҷанд",
+    "verification": true
   },
   {
-    "userName": "user9023",
+    "userName": "theabdulloev",
     "vip": true,
-    "fullName": "Alice Smith",
+    "fullName": "Ismoiljon Abdulloev",
     "description": "Мутахассис оид ба тасдиқи амалиёти бонкӣ, филиал дар ш.Хуҷанд",
     "watch": "1897",
     "salary": "12 000",
-    "contacts": "+992 92 999 99 99",
-    "email": "email@email.com",
-    "location": "Худжанд"
+    "contacts": "+992 97 809 23 23",
+    "email": "ismoiljon.abdulloev.ibt@email.com",
+    "location": "Хуҷанд",
+    "verification": true
   },
   {
-    "userName": "user17653",
+    "userName": "theabdulloev",
     "vip": false,
-    "fullName": "Emma Johnson",
+    "fullName": "Ismoiljon Abdulloev",
     "description": "Мутахассиси технологияҳои иттилоотӣ",
     "watch": "3245",
     "salary": "2 700",
-    "contacts": "+992 92 999 99 99",
-    "email": "email@email.com",
-    "location": "Худжанд"
+    "contacts": "+992 97 809 23 23",
+    "email": "ismoiljon.abdulloev.ibt@email.com",
+    "location": "Хуҷанд",
+    "verification": true
   },
   {
-    "userName": "user17652",
+    "userName": "theabdulloev",
     "vip": false,
-    "fullName": "Emma Johnson",
+    "fullName": "Ismoiljon Abdulloev",
     "description": "Мушовири онлайн дар вакти бегоҳӣ",
     "watch": "3245",
-    "salary": "42 700",
-    "contacts": "+992 92 999 99 99",
-    "email": "email@email.com",
-    "location": "Худжанд"
+    "salary": "2 700",
+    "contacts": "+992 97 809 23 23",
+    "email": "ismoiljon.abdulloev.ibt@email.com",
+    "location": "Хуҷанд",
+    "verification": true
   },
   {
-    "userName": "user17651",
+    "userName": "theabdulloev",
     "vip": false,
-    "fullName": "Emma Johnson",
+    "fullName": "Ismoiljon Abdulloev",
     "description": "Агент барои иҷора, харид ва фурӯши биноҳои истиқоматӣ",
     "watch": "3245",
     "salary": "1 700",
-    "contacts": "+992 92 999 99 99",
-    "email": "email@email.com",
-    "location": "Худжанд"
+    "contacts": "+992 97 809 23 23",
+    "email": "ismoiljon.abdulloev.ibt@email.com",
+    "location": "Хуҷанд",
+    "verification": true
   }
 ]

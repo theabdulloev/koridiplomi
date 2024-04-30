@@ -10,7 +10,7 @@ export default async function Home() {
   return (
     <main>
       <div className="p-5 text-center uppercase text-2xl">
-        <span className="text-primary mr-2">ИМРУЗ</span>
+        <span className="text-teal-500 mr-2">ИМРУЗ</span>
         КОРИ ДУСТДОШТААШОНРО ёбед!
       </div>
       <SearcCompanent></SearcCompanent>

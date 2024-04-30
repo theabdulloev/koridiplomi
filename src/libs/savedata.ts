@@ -10,9 +10,10 @@ export async function SaveData(data: any) {
       description: data.desc,
       watch: 2323,
       salary: data.salary,
-      contacts: "978092323",
+      contacts: "97 809 23 23",
       email: "ismoiljon.abdulloev.ibt@gmail.com",
       location: data.region.currentKey,
+      verification: true,
     });
     return await newdata.save();
   } catch (error) {

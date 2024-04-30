@@ -24,6 +24,7 @@ export default function Kor({
   location,
   email,
   vip,
+  verification,
 }: any) {
   const [viewContact, setViewContact] = useState(true);
   return (
@@ -50,7 +51,12 @@ export default function Kor({
               <Icon fontSize={25} icon="line-md:watch" /> {watch}
             </div>
           </div>
-          <p className="text-small text-default-500">{userName}</p>
+          <div className="flex items-center">
+            <p className="text-small text-default-500">{userName}</p>
+            {verification ? <div className="text-primary">
+              <Icon fontSize={25} icon="bitcoin-icons:verify-filled" />
+            </div> : <></>}
+          </div>
         </div>
       </CardHeader>
       <Divider />
@@ -58,7 +64,7 @@ export default function Kor({
         <p className="text-2xl">{description}</p>
         <br />
         <div className="w-full flex flex-col lg:justify-start lg:flex-row gap-3 items-start justify-center lg:items-center">
-          <Button fullWidth color="success" variant="bordered">
+          <Button fullWidth className="text-teal-500" variant="bordered">
             {salary} сомони / мох.
           </Button>
           <Button fullWidth variant="bordered">

@@ -6,6 +6,7 @@ import {
   NavbarContent,
   NavbarItem,
   Link,
+  Button,
 } from "@nextui-org/react";
 import LogoKor from "./Logo";
 import { usePathname } from "next/navigation";
@@ -13,6 +14,7 @@ import { useRecoilValue, useSetRecoilState } from "recoil";
 import { HeaderToggle } from "../app/store/atom/store";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { toast } from "sonner";
+import { Icon } from "@iconify/react/dist/iconify.js";
 setTimeout(() => {
   toast("My toast on a page load");
 });
@@ -71,10 +73,15 @@ export default function App() {
         </NavbarContent>
         <NavbarContent justify="end">
           <div className="hidden md:block">
+            <Button variant="light" href="/notification" as={Link}>
+              <Icon fontSize={25} icon="iconoir:bell-notification" />
+            </Button>
+          </div>
+          <div className="hidden md:block">
             <ThemeSwitcher />
           </div>
           <NavbarItem>
-            <Link isBlock href="/login" color="warning">
+            <Link isBlock href="/login" className="text-teal-500">
               Ворид шудан
             </Link>
           </NavbarItem>
