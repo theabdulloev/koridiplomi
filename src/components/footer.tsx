@@ -6,7 +6,7 @@ import * as route from "next/navigation";
 export default function Footer() {
   const pathname = route.usePathname();
   return (
-    <main className="sm:hidden w-full fixed bottom-0 z-50 bg-white">
+    <main className="sm:hidden  w-full fixed bottom-0 z-50 bg-white dark:bg-black dark:text-white">
       <ButtonGroup
         variant="light"
         className="text-teal-500"
