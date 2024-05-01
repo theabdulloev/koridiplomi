@@ -5,6 +5,7 @@ import { Button } from "@nextui-org/react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
+import ThemeIcon from "./svg/theme";
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -21,7 +22,7 @@ export function ThemeSwitcher() {
   return (
     <div className="flex gap-3">
       <Button variant="light" className="w-full" onClick={() => changeTheme()}>
-        <Icon fontSize={25} icon="mdi:theme-light-dark" />
+        <ThemeIcon />
       </Button>
     </div>
   );

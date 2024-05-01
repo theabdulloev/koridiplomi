@@ -27,8 +27,9 @@ export default function Kor({
   verification,
 }: any) {
   const [viewContact, setViewContact] = useState(true);
+  console.log(salary);
   return (
-    <Card className="w-full  bg-transparent backdrop-blur-3xl min-h-60">
+    <Card className="w-full min-h-60">
       <CardHeader className="flex gap-3">
         <div className="w-10 h-10">
           {vip ? (
@@ -46,16 +47,17 @@ export default function Kor({
         </div>
         <div className="w-full flex flex-col">
           <div className="w-full flex justify-between">
-            <p className="text-md"> {fullName}</p>
-            <div className="flex gap-2">
-              <Icon fontSize={25} icon="line-md:watch" /> {watch}
-            </div>
+            <p className="text-md">{fullName}</p>
           </div>
           <div className="flex items-center">
             <p className="text-small text-default-500">{userName}</p>
-            {verification ? <div className="text-primary">
-              <Icon fontSize={25} icon="bitcoin-icons:verify-filled" />
-            </div> : <></>}
+            {verification ? (
+              <div className="text-primary">
+                <Icon fontSize={25} icon="bitcoin-icons:verify-filled" />
+              </div>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </CardHeader>
@@ -64,18 +66,26 @@ export default function Kor({
         <p className="text-2xl">{description}</p>
         <br />
         <div className="w-full flex flex-col lg:justify-start lg:flex-row gap-3 items-start justify-center lg:items-center">
-          <Button fullWidth className="text-teal-500" variant="bordered">
-            {salary} сомони / мох.
-          </Button>
-          <Button fullWidth variant="bordered">
+          <div className="text-primary flex gap-1">
+            <Icon fontSize={25} icon="healthicons:money-bag-outline" />
+            <span>{salary}</span> сомони / мох.
+          </div>
+
+          <div className="flex gap-1 ">
+            <Icon fontSize={25} icon="material-symbols:work-outline" />
             Аз 1 сол то 3 сол
-          </Button>
-          <Button fullWidth variant="bordered">
+          </div>
+
+          <div className="flex gap-1">
+            {" "}
+            <Icon fontSize={25} icon="ic:outline-email" />
             {email}
-          </Button>
-          <Button fullWidth variant="bordered">
+          </div>
+
+          <div className="flex gap-1">
+            <Icon fontSize={25} icon="humbleicons:location" />
             {location}
-          </Button>
+          </div>
         </div>
 
         <div className="py-3">
@@ -98,7 +108,7 @@ export default function Kor({
         >
           Раками телефон
         </Button>
-        <Button className="w-full md:w-40" color="primary">
+        <Button color="primary" className="w-full text-white md:w-40">
           Тафсилоти бештар
         </Button>
       </CardFooter>

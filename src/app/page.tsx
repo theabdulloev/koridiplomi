@@ -6,17 +6,18 @@ import ToPop from "@/components/totop";
 
 export default async function Home() {
   const data: [] = await GetData();
-  
+
   return (
     <main>
       <div className="p-5 text-center uppercase text-2xl">
-        <span className="text-teal-500 mr-2">ИМРУЗ</span>
+        <span className="text-primary mr-2">ИМРУЗ</span>
         КОРИ ДУСТДОШТААШОНРО ёбед!
       </div>
-      <SearcCompanent></SearcCompanent>
-      <div className="container mx-auto border grid md:grid-cols-[minmax(200px,_400px)_1fr]">
-        <div className="border-r p-4">
-          <Filter />
+      <div className="container mx-auto grid md:grid-cols-[minmax(200px,_400px)_1fr]">
+        <div>
+          <div className="hidden p-4 md:block">
+            <Filter />
+          </div>
         </div>
         <div className="w-full h-full p-4 space-y-3 overflow-hidden ">
           {/* {arr.map(i => <Kor />)} */}

@@ -5,8 +5,8 @@ export default function LoginPage() {
   const [selected, setSelected] = React.useState<string | number>("login");
 
   return (
-    <div className="flex flex-col max-w-72 p-4 justify-center items-center mx-auto h-screen">
-      <Card className="max-w-[540px] min-w-[540px] min-h-[500px] max-h-[700px]">
+    <div className="flex flex-col p-4 justify-center items-center mx-auto h-[80vh]">
+      <Card className="max-w-[540px] w-full h-full max-h-[700px]">
         <CardHeader className="text-center w-full">
             <p>Ворид шудан</p>
         </CardHeader>

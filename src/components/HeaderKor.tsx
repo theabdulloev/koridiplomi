@@ -81,7 +81,7 @@ export default function App() {
             <ThemeSwitcher />
           </div>
           <NavbarItem>
-            <Link isBlock href="/login" className="text-teal-500">
+            <Link isBlock href="/login" className="text-primary">
               Ворид шудан
             </Link>
           </NavbarItem>

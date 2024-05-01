@@ -6,5 +6,5 @@ export const HeaderToggle = atom({
 });
 export const HiddenFilter = atom({
   key: "HiddenFilter",
-  default: true,
+  default: false,
 });
