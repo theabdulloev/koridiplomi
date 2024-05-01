@@ -40,6 +40,7 @@ export const metadata: Metadata = {
 
 import { Providers } from "./providers";
 import Back from "@/components/back";
+import Script from "next/script";
 
 export default function RootLayout({
   children,
@@ -57,6 +58,17 @@ export default function RootLayout({
           name="google-site-verification"
           content="TY52qt7axMYAHDvC9xNbeZvTQlngPkvE6wWR5uzdtqk"
         />
+        <Script id="tag-manager">
+          {`
+          <!-- Google Tag Manager -->
+          <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-58F6783J');</script>
+          <!-- End Google Tag Manager -->
+          `}
+        </Script>
       </head>
       <body className="w-screen  flex flex-col overflow-x-hidden">
         <SpeedInsights />
