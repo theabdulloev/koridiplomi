@@ -5,7 +5,7 @@ import ToPop from "@/components/totop";
 
 async function getData() {
   const res = await fetch("https://ruznomatj.vercel.app/products", {
-    cache: "no-store",
+    next: { revalidate: 180 },
   });
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
