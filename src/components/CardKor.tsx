@@ -15,7 +15,7 @@ import {
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function Kor({
-  userName,
+  username,
   fullName,
   description,
   watch,
@@ -50,7 +50,7 @@ export default function Kor({
             <p className="text-md">{fullName}</p>
           </div>
           <div className="flex items-center">
-            <p className="text-small text-default-500">{userName}</p>
+            <p className="text-small text-default-500">{username}</p>
             {verification ? (
               <div className="text-primary">
                 <Icon fontSize={25} icon="bitcoin-icons:verify-filled" />
