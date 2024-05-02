@@ -57,7 +57,7 @@ export default async function Mongo() {
           const res = await save();
           console.log(res);
         }}
-      ></Button>
+      >save</Button>
     </main>
   );
 }
