@@ -1,6 +1,4 @@
 import Create from "@/components/create";
-import { SaveData } from "@/libs/savedata";
-import { Button } from "@nextui-org/react";
 import { Metadata } from "next";
 import React from "react";
 export const metadata: Metadata = {
