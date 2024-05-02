@@ -18,7 +18,7 @@ export default async function Mongo() {
     <main>
       <span>Hello mongo db</span>
       {data.map((i: any) => (
-        <span key={i.username}>i.name</span>
+        <span key={i.username}>{i.name}</span>
       ))}
     </main>
   );
