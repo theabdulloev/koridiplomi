@@ -7,7 +7,6 @@ import {
   Selection,
   Button,
 } from "@nextui-org/react";
-import { SaveData } from "@/libs/savedata";
 import { toast } from "sonner";
 const regions = [
   { label: "Абдурахман Джами", value: "Abdurahman Jam" },
@@ -163,12 +162,12 @@ export default function Create() {
         color={salary == "" || desc == "" ? "default" : "primary"}
         fullWidth
         onClick={async () => {
-          const newdata = await SaveData({
+          const newdata = {
             salary,
             desc,
             region,
             categoryValue,
-          });
+          };
           toast.success("Success");
           console.log(newdata);
           return newdata;

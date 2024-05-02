@@ -1,18 +1,6 @@
 [
   {
-    "userName": "theabdulloev",
-    "vip": true,
-    "fullName": "Ismoiljon Abdulloev",
-    "description": "Бонкдор - коршиноси қарз дар шаҳри Хуҷанд",
-    "watch": 1025,
-    "salary": 5000,
-    "contacts": "+992 97 809 23 23",
-    "email": "ismoiljon.abdulloev.ibt@gmail.com",
-    "location": "Хуҷанд",
-    "verification": true
-  },
-  {
-    "userName": "theabdulloev",
+    "username": "theabdulloev",
     "vip": true,
     "fullName": "Ismoiljon Abdulloev",
     "description": "Мутахассис оид ба тасдиқи амалиёти бонкӣ, филиал дар ш.Хуҷанд",
@@ -24,7 +12,20 @@
     "verification": true
   },
   {
-    "userName": "theabdulloev",
+    "username": "theabdulloev",
+    "vip": true,
+    "fullName": "Ismoiljon Abdulloev",
+    "description": "Бонкдор - коршиноси қарз дар шаҳри Хуҷанд",
+    "watch": 1025,
+    "salary": 5000,
+    "contacts": "+992 97 809 23 23",
+    "email": "ismoiljon.abdulloev.ibt@gmail.com",
+    "location": "Хуҷанд",
+    "verification": true
+  },
+  
+  {
+    "username": "theabdulloev",
     "vip": false,
     "fullName": "Ismoiljon Abdulloev",
     "description": "Мутахассиси технологияҳои иттилоотӣ",
@@ -36,7 +37,7 @@
     "verification": true
   },
   {
-    "userName": "theabdulloev",
+    "username": "theabdulloev",
     "vip": false,
     "fullName": "Ismoiljon Abdulloev",
     "description": "Мушовири онлайн дар вакти бегоҳӣ",
@@ -48,7 +49,7 @@
     "verification": true
   },
   {
-    "userName": "theabdulloev",
+    "username": "theabdulloev",
     "vip": false,
     "fullName": "Ismoiljon Abdulloev",
     "description": "Агент барои иҷора, харид ва фурӯши биноҳои истиқоматӣ",
