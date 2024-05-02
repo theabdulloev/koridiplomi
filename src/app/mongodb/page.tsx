@@ -1,3 +1,5 @@
+import { Button } from "@nextui-org/react";
+
 async function getData() {
   const res = await fetch("https://ruznomatj.vercel.app/products", {
     cache: "no-store",
@@ -12,7 +14,35 @@ async function getData() {
 
   return res.json();
 }
+const save = async () => {
+  const data = {
+    username: "test",
+    vip: true,
+    fullName: "Ismoiljon Abdulloev",
+    description:
+      "Мутахассис оид ба тасдиқи амалиёти бонкӣ, филиал дар ш.Хуҷанд",
+    watch: 189,
+    salary: 12000,
+    contacts: "+992 97 809 23 23",
+    email: "ismoiljon.abdulloev.ibt@gmail.com",
+    location: "Хуҷанд",
+    verification: true,
+  };
+  try {
+    const res = await fetch("https://ruznomatj.vercel.app/products", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const result = await res.json();
 
+    return Response.json(result);
+  } catch (error) {
+    console.log(error);
+  }
+};
 export default async function Mongo() {
   const data = await getData();
   console.log(data);
@@ -22,6 +52,12 @@ export default async function Mongo() {
       {data.map((i: any) => (
         <span key={i._id}>{i.description}</span>
       ))}
+      <Button
+        onClick={async () => {
+          const res = await save();
+          console.log(res);
+        }}
+      ></Button>
     </main>
   );
 }
