@@ -1,5 +1,7 @@
 async function getData() {
-  const res = await fetch("https://ruznomatj.vercel.app/products");
+  const res = await fetch("https://ruznomatj.vercel.app/products", {
+    cache: "no-store",
+  });
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
@@ -18,7 +20,7 @@ export default async function Mongo() {
     <main>
       <span>Hello mongo db</span>
       {data.map((i: any) => (
-        <span key={i.username}>{i.name}</span>
+        <span key={i._id}>{i.description}</span>
       ))}
     </main>
   );
