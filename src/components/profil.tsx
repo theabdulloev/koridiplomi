@@ -16,7 +16,7 @@ export default function ProfileCompanent() {
   };
   return (
     <>
-      <div className="w-full h-screen">
+      <div className="w-full h-full">
         <div className="w-full relative bg-indigo-50 dark:bg-gray-600 h-24 flex justify-center items-end">
           <div className="w-20 h-20 absolute bg-white rounded-full -mb-9">
             <Avatar className="w-full h-full" alt="ne"></Avatar>

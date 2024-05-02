@@ -1,7 +1,7 @@
 import { Button } from "@nextui-org/react";
 import { Metadata } from "next";
 import React from "react";
-import LogoKor from "../../components/Logo";
+import LogoKor from "../../components/svg/Logo";
 import EmployerCompanent from "../../components/EmployerCompananent";
 export const metadata: Metadata = {
   title: "BEKOR TJ - Работодателям",

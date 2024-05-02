@@ -13,6 +13,11 @@ import {
   Badge,
 } from "@nextui-org/react";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import VerifyIcon from "./svg/verify";
+import SalaryIcon from "./svg/salary";
+import WorkIcon from "./svg/work";
+import EmailIcon from "./svg/email";
+import LocationIcon from "./svg/location";
 
 export default function Kor({
   username,
@@ -53,7 +58,7 @@ export default function Kor({
             <p className="text-small text-default-500">{username}</p>
             {verification ? (
               <div className="text-primary">
-                <Icon fontSize={25} icon="bitcoin-icons:verify-filled" />
+                <VerifyIcon />
               </div>
             ) : (
               <></>
@@ -66,24 +71,24 @@ export default function Kor({
         <p className="text-2xl">{description}</p>
         <br />
         <div className="w-full flex flex-col lg:justify-start lg:flex-row gap-3 items-start justify-center lg:items-center">
-          <div className="text-primary flex gap-1">
-            <Icon fontSize={25} icon="healthicons:money-bag-outline" />
+          <div className="text-primary flex items-center gap-1">
+            <SalaryIcon />
             <span>{salary}</span> сомони / мох.
           </div>
 
-          <div className="flex gap-1 ">
-            <Icon fontSize={25} icon="material-symbols:work-outline" />
+          <div className="flex gap-1 items-center ">
+            <WorkIcon />
             Аз 1 сол то 3 сол
           </div>
 
-          <div className="flex gap-1">
+          <div className="flex gap-1 items-center">
             {" "}
-            <Icon fontSize={25} icon="ic:outline-email" />
+            <EmailIcon />
             {email}
           </div>
 
-          <div className="flex gap-1">
-            <Icon fontSize={25} icon="humbleicons:location" />
+          <div className="flex gap-1 items-center">
+            <LocationIcon />
             {location}
           </div>
         </div>

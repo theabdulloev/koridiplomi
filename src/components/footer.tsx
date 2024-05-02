@@ -9,7 +9,7 @@ import SearchIcon from "./svg/search";
 export default function Footer() {
   const pathname = route.usePathname();
   return (
-    <main className="sm:hidden  w-full fixed bottom-0 z-50 bg-white dark:bg-black dark:text-white">
+    <main className="sm:hidden  w-full fixed bottom-0 z-50 bg-white border-t-1 dark:border-t-gray-700 dark:bg-black dark:text-white">
       <ButtonGroup
         variant="light"
         className="text-primary"

@@ -8,7 +8,7 @@ import {
   Link,
   Button,
 } from "@nextui-org/react";
-import LogoKor from "./Logo";
+import LogoKor from "./svg/Logo";
 import { usePathname } from "next/navigation";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { HeaderToggle } from "../app/store/atom/store";

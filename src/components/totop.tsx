@@ -3,6 +3,7 @@ import { useWindowScroll } from "@mantine/hooks";
 import { Affix, Text, Transition, rem } from "@mantine/core";
 import { Button } from "@nextui-org/react";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import ToTopIcon from "./svg/totop";
 
 export default function ToPop() {
   const [scroll, scrollTo] = useWindowScroll();
@@ -14,7 +15,7 @@ export default function ToPop() {
         <Transition transition="slide-up" mounted={scroll.y > 0}>
           {(transitionStyles) => (
             <Button style={transitionStyles} onClick={() => scrollTo({ y: 0 })}>
-              <Icon fontSize={25} icon="solar:arrow-to-top-right-linear" />
+              <ToTopIcon />
             </Button>
           )}
         </Transition>
