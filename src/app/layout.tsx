@@ -54,6 +54,7 @@ export default function RootLayout({
           name="google-adsense-account"
           content="ca-pub-9758420922937149"
         ></meta>
+          <meta name="yandex-verification" content="1ede586f398d904e" />
         <meta
           name="google-site-verification"
           content="TY52qt7axMYAHDvC9xNbeZvTQlngPkvE6wWR5uzdtqk"
