@@ -1,7 +1,7 @@
 import KORTJ from "@/components/comm";
 import Filter from "../components/FilterCompanent";
-import SearcCompanent from "@/components/Search";
 import ToPop from "@/components/totop";
+import Categories from "@/components/categories";
 
 async function getData() {
   const res = await fetch("https://ruznomatj.vercel.app/products", {
@@ -98,7 +98,7 @@ export default async function Home() {
         </div>
         <div className="w-full h-full p-4 space-y-3 overflow-hidden ">
           {/* {arr.map(i => <Kor />)} */}
-
+          <Categories />
           <KORTJ data={data}></KORTJ>
           <ToPop></ToPop>
           {/* <Kor

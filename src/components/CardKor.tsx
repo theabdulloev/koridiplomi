@@ -18,6 +18,7 @@ import SalaryIcon from "./svg/salary";
 import WorkIcon from "./svg/work";
 import EmailIcon from "./svg/email";
 import LocationIcon from "./svg/location";
+import { NumberFormatter } from "@mantine/core";
 
 export default function Kor({
   username,
@@ -73,7 +74,12 @@ export default function Kor({
         <div className="w-full flex flex-col lg:justify-start lg:flex-row gap-3 items-start justify-center lg:items-center">
           <div className="text-primary flex items-center gap-1">
             <SalaryIcon />
-            <span>{salary}</span> сомони / мох.
+            {/* <span>{salary}</span> сомони / мох. */}
+            <NumberFormatter
+              suffix=" сомони / мох"
+              value={salary}
+              thousandSeparator
+            />
           </div>
 
           <div className="flex gap-1 items-center ">
