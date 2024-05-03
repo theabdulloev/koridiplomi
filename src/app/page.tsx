@@ -4,112 +4,104 @@ import ToPop from "@/components/totop";
 import Categories from "@/components/categories";
 
 async function getData() {
-  const res = await fetch("https://ruznomatj.vercel.app/products", {
-    next: { revalidate: 180 },
-  });
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
+    const res = await fetch("https://ruznomatj.vercel.app/products", {
+        next: { revalidate: 180 },
+    });
+    // The return value is *not* serialized
+    // You can return Date, Map, Set, etc.
 
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
+    if (!res.ok) {
+        // This will activate the closest `error.js` Error Boundary
+        throw new Error("Failed to fetch data");
+    }
 
-  return res.json();
+    return res.json();
 }
 
 export default async function Home() {
-  const data: [] = await getData();
-  // const data = [
-  //   {
-  //     username: "theabdulloev",
-  //     vip: true,
-  //     fullName: "Ismoiljon Abdulloev",
-  //     description:
-  //       "Мутахассис оид ба тасдиқи амалиёти бонкӣ, филиал дар ш.Хуҷанд",
-  //     watch: 189,
-  //     salary: 1000,
-  //     contacts: "+992 97 809 23 23",
-  //     email: "ismoiljon.abdulloev.ibt@gmail.com",
-  //     location: "Хуҷанд",
-  //     verification: true,
-  //   },
-  //   {
-  //     username: "theabdulloev",
-  //     vip: true,
-  //     fullName: "Ismoiljon Abdulloev",
-  //     description: "Бонкдор - коршиноси қарз дар шаҳри Хуҷанд",
-  //     watch: 1025,
-  //     salary: 5000,
-  //     contacts: "+992 97 809 23 23",
-  //     email: "ismoiljon.abdulloev.ibt@gmail.com",
-  //     location: "Хуҷанд",
-  //     verification: true,
-  //   },
+    const data: [] = await getData();
+    //   const data = [
+    //     {
+    //       username: "theabdulloev",
+    //       vip: true,
+    //       fullName: "Ismoiljon Abdulloev",
+    //       description:
+    //         "Мутахассис оид ба тасдиқи амалиёти бонкӣ, филиал дар ш.Хуҷанд",
+    //       watch: 189,
+    //       salary: 1000,
+    //       contacts: "+992 97 809 23 23",
+    //       email: "ismoiljon.abdulloev.ibt@gmail.com",
+    //       location: "Хуҷанд",
+    //       verification: true,
+    //     },
+    //     {
+    //       username: "theabdulloev",
+    //       vip: true,
+    //       fullName: "Ismoiljon Abdulloev",
+    //       description: "Бонкдор - коршиноси қарз дар шаҳри Хуҷанд",
+    //       watch: 1025,
+    //       salary: 5000,
+    //       contacts: "+992 97 809 23 23",
+    //       email: "ismoiljon.abdulloev.ibt@gmail.com",
+    //       location: "Хуҷанд",
+    //       verification: true,
+    //     },
 
-  //   {
-  //     username: "theabdulloev",
-  //     vip: false,
-  //     fullName: "Ismoiljon Abdulloev",
-  //     description: "Мутахассиси технологияҳои иттилоотӣ",
-  //     watch: 3245,
-  //     salary: 2700,
-  //     contacts: "+992 97 809 23 23",
-  //     email: "ismoiljon.abdulloev.ibt@gmail.com",
-  //     location: "Хуҷанд",
-  //     verification: true,
-  //   },
-  //   {
-  //     username: "theabdulloev",
-  //     vip: false,
-  //     fullName: "Ismoiljon Abdulloev",
-  //     description: "Мушовири онлайн дар вакти бегоҳӣ",
-  //     watch: 3245,
-  //     salary: 2700,
-  //     contacts: "+992 97 809 23 23",
-  //     email: "ismoiljon.abdulloev.ibt@gmail.com",
-  //     location: "Хуҷанд",
-  //     verification: true,
-  //   },
-  //   {
-  //     username: "theabdulloev",
-  //     vip: false,
-  //     fullName: "Ismoiljon Abdulloev",
-  //     description: "Агент барои иҷора, харид ва фурӯши биноҳои истиқоматӣ",
-  //     watch: 3245,
-  //     salary: 1700,
-  //     contacts: "+992 97 809 23 23",
-  //     email: "ismoiljon.abdulloev.ibt@gmail.com",
-  //     location: "Хуҷанд",
-  //     verification: true,
-  //   },
-  // ];
-  return (
-    <main>
-      <div className="p-5 text-center uppercase text-2xl">
-        <span className="text-primary mr-2">ИМРУЗ</span>
-        КОРИ ДУСТДОШТААШОНРО ёбед!
-      </div>
-      <div className="container mx-auto grid md:grid-cols-[minmax(200px,_400px)_1fr]">
-        <div>
-          <div className="hidden p-4 md:block">
-            <Filter />
-          </div>
-        </div>
-        <div className="w-full h-full p-4 space-y-3 overflow-hidden ">
-          {/* {arr.map(i => <Kor />)} */}
-          <Categories />
-          <KORTJ data={data}></KORTJ>
-          <ToPop></ToPop>
-          {/* <Kor
-          userName="username"
-          fullName="Tom Bom"
-          description="Frontend developer and UI/UX enthusiast. Join me on this coding
-          adventure!"
-          watch="2340"
-        /> */}
-        </div>
-      </div>
-    </main>
-  );
+    //     {
+    //       username: "theabdulloev",
+    //       vip: false,
+    //       fullName: "Ismoiljon Abdulloev",
+    //       description: "Мутахассиси технологияҳои иттилоотӣ",
+    //       watch: 3245,
+    //       salary: 2700,
+    //       contacts: "+992 97 809 23 23",
+    //       email: "ismoiljon.abdulloev.ibt@gmail.com",
+    //       location: "Хуҷанд",
+    //       verification: true,
+    //     },
+    //     {
+    //       username: "theabdulloev",
+    //       vip: false,
+    //       fullName: "Ismoiljon Abdulloev",
+    //       description: "Мушовири онлайн дар вакти бегоҳӣ",
+    //       watch: 3245,
+    //       salary: 2700,
+    //       contacts: "+992 97 809 23 23",
+    //       email: "ismoiljon.abdulloev.ibt@gmail.com",
+    //       location: "Хуҷанд",
+    //       verification: true,
+    //     },
+    //     {
+    //       username: "theabdulloev",
+    //       vip: false,
+    //       fullName: "Ismoiljon Abdulloev",
+    //       description: "Агент барои иҷора, харид ва фурӯши биноҳои истиқоматӣ",
+    //       watch: 3245,
+    //       salary: 1700,
+    //       contacts: "+992 97 809 23 23",
+    //       email: "ismoiljon.abdulloev.ibt@gmail.com",
+    //       location: "Хуҷанд",
+    //       verification: true,
+    //     },
+    //   ];
+    return (
+        <main>
+            <div className="p-5 text-center uppercase text-2xl">
+                <span className="text-primary mr-2">ИМРУЗ</span>
+                КОРИ ДУСТДОШТААШОНРО ёбед!
+            </div>
+            <div className="container mx-auto grid md:grid-cols-[minmax(200px,_400px)_1fr]">
+                <div>
+                    <div className="hidden p-4 md:block">
+                        <Filter />
+                    </div>
+                </div>
+                <div className="w-full h-full p-4 space-y-3 overflow-hidden ">
+                    <Categories />
+                    <KORTJ data={data}></KORTJ>
+                    <ToPop></ToPop>
+                </div>
+            </div>
+        </main>
+    );
 }
