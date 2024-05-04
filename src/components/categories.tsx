@@ -32,27 +32,27 @@ import WorksIcon from "./svg/wordss";
 export default function Categories() {
   const list = [
     {
-      title: "Все вакансии",
+      title: "Ҳамаи вакансияҳо",
       img: "/images/fruit-4.jpeg",
       price: "251 вакансии",
     },
     {
-      title: "Вакансии дня",
+      title: "Вакансияи руз",
       img: "/images/fruit-5.jpeg",
       price: "27 вакансии",
     },
     {
-      title: "Работа из дома",
+      title: "Кор аз хона",
       img: "/images/fruit-6.jpeg",
       price: "102 вакансии",
     },
     {
-      title: "Продавец",
+      title: "Фурушанда",
       img: "/images/fruit-7.jpeg",
       price: "44 вакансии",
     },
     {
-      title: "Кассир",
+      title: "ИТ",
       img: "/images/fruit-8.jpeg",
       price: "78 вакансии",
     },

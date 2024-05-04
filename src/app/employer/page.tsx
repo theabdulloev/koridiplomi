@@ -10,5 +10,5 @@ export default function Employer() {
         <main className="w-full h-screen flex justify-center flex-col gap-5 items-center">
             <Create></Create>
         </main>
-    );
+    );  
 }

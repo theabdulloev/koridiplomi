@@ -4,7 +4,7 @@ import Kor from "./CardKor";
 
 export default function ProfileCompanent() {
   const data = {
-    userName: "theabdulloev",
+    username: "theabdulloev",
     vip: true,
     fullName: "Ismoiljon Abdulloev",
     description: "Бонкдор - коршиноси қарз дар шаҳри Хуҷанд",
