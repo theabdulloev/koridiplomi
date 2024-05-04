@@ -120,7 +120,7 @@ export default function Create() {
 
     return (
         <div className="container flex flex-col items-center space-y-4 h-full p-4">
-            <p className="py-4 font-bold text-2xl">
+            <p className="py-4 text-center font-bold text-2xl">
                 Кушодани ҷойҳои корӣ, ки тиҷорати шуморо пеш мебаранд.
             </p>
             <Textarea
