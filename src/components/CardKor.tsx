@@ -33,7 +33,6 @@ export default function Kor({
   verification,
 }: any) {
   const [viewContact, setViewContact] = useState(true);
-  console.log(salary);
   return (
     <Card className="w-full min-h-60">
       <CardHeader className="flex gap-3">

@@ -2,7 +2,6 @@
 import Kor from "./CardKor";
 
 function KORTJ({ data }: any) {
-    console.log(data)
   return (
     <>
       {data?.map((i: any) => (

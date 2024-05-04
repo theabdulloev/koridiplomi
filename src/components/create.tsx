@@ -12,6 +12,7 @@ import {
     Radio,
 } from "@nextui-org/react";
 import { toast } from "sonner";
+import PostVacancies from "@/libs/save";
 const regions = [
     { label: "Абдурахман Джами", value: "Abdurahman Jam" },
     { label: "Айни", value: "Ayni" },
@@ -142,11 +143,9 @@ export default function Create() {
                     color="primary"
                     onValueChange={() => {
                         if (salaryCheck) {
-                            console.log(salaryCheck, 1);
                             setSalaryCheck(false);
                             setControllSalary(false);
                         } else {
-                            console.log(salaryCheck, 2);
                             setSalaryCheck(true);
                             setControllSalary(true);
                         }
@@ -221,9 +220,9 @@ export default function Create() {
                         region,
                         categoryValue,
                     };
-                    toast.success("Success");
-                    console.log(newdata);
-                    return newdata;
+                    toast.loading("Loading");
+                    const result = PostVacancies(newdata);
+                    console.log(result);
                 }}
                 type="submit"
             >
