@@ -4,7 +4,7 @@ import "./globals.css";
 import HeaderKor from "../components/HeaderKor";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 export const metadata: Metadata = {
     title: "BEKOR TJ - Портали ҷойҳои кории холӣ",
@@ -41,8 +41,6 @@ export const metadata: Metadata = {
 };
 
 import { Providers } from "./providers";
-import Script from "next/script";
-
 export default function RootLayout({
     children,
 }: {
@@ -59,29 +57,6 @@ export default function RootLayout({
                     name="google-site-verification"
                     content="TY52qt7axMYAHDvC9xNbeZvTQlngPkvE6wWR5uzdtqk"
                 />
-                <Script type="application/ld+json" id="tag-manager">
-                    {`
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "Как я могу разместить вакансию или создать резюме на вашем сайте?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Вы можете разместить вакансии и создать резюме бесплатно и без ограничений."
-    }
-  },{
-    "@type": "Question",
-    "name": "Нужно ли платить за размещение вакансий на вашем сайте?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Нет, размещение вакансий на нашем сайте бесплатно. Однако вы можете платить за продвижение ваших вакансий, чтобы они отображались в верхней части результатов поиска."
-    }
-  }]
-}
-          `}
-                </Script>
             </head>
             <body className="w-screen  flex flex-col overflow-x-hidden">
                 <SpeedInsights />
