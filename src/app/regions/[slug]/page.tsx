@@ -1,6 +1,30 @@
 import Filter from "@/components/FilterCompanent";
 import KORTJ from "@/components/comm";
 import ToPop from "@/components/totop";
+import { Metadata, ResolvingMetadata } from "next";
+type Props = {
+    params: { slug: string };
+    searchParams: { [key: string]: string | string[] | undefined };
+};
+const getNameForMata = (slug: any) => {
+    const region = regions.find((r) => r.value === slug);
+    return region ? `Кор дар шахр/нохияи ${region.label}` : "";
+};
+const getNameForMataDesk = (slug: any) => {
+    const region = regions.find((r) => r.value === slug);
+    return region ? `ИМРУЗ КОРИ ДУСТДОШТААШОНРО ДАР ${region.label} ЕБЕД` : "";
+};
+
+export async function generateMetadata(
+    { params, searchParams }: Props,
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const slug = params.slug;
+    return {
+        title: getNameForMata(slug),
+        description: getNameForMataDesk(slug),
+    };
+}
 async function getData() {
     const res = await fetch("https://ruznomatj.vercel.app/products", {
         next: { revalidate: 180 },
