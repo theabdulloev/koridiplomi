@@ -22,7 +22,7 @@ module.exports = {
                         primary: {
                             //... 50 to 900
                             foreground: "#FFFFFF",
-                            DEFAULT: "teal",
+                            DEFAULT: "#015b75",
                         },
                         // ... rest of the colors
                     },
@@ -34,7 +34,7 @@ module.exports = {
                         primary: {
                             //... 50 to 900
                             foreground: "#FFFFFF",
-                            DEFAULT: "teal",
+                            DEFAULT: "#015b75",
                         },
                     },
                     // ... rest of the colors

@@ -28,7 +28,6 @@ const regions = [
     { label: "ВМКБ", value: "VMKB" },
     { label: "Восе", value: "Vose" },
     { label: "Гисар", value: "Gisar" },
-    { label: "Горный-Матча", value: "Gorny-Matcha" },
     { label: "Гулистон", value: "Gulistoni" },
     { label: "Дангара", value: "Dangara" },
     { label: "Дарваз", value: "Darvaz" },

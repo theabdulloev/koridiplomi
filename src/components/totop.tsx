@@ -23,3 +23,4 @@ export default function ToPop() {
     </>
   );
 }
+// w-[calc(100%_-_8px)]
