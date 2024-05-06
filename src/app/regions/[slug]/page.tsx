@@ -1,5 +1,4 @@
 import Filter from "@/components/FilterCompanent";
-import Categories from "@/components/categories";
 import KORTJ from "@/components/comm";
 import ToPop from "@/components/totop";
 async function getData() {
@@ -162,6 +161,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     //         verification: true,
     //     },
     // ];
+
     return (
         <>
             <div className="p-5 text-center uppercase text-2xl">

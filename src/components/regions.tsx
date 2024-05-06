@@ -76,13 +76,18 @@ const regions = [
     { label: "Шоҳмансур", value: "shahmansur" },
     { label: "Шуғнон", value: "shugnon" },
 ];
+// sm	640px
+// md	768px
+// lg	1024px
+// xl	1280px
+// 2xl
 export default function RegionCompanent() {
     return (
         <main className="w-full">
             <h1 className="text-primary text-2xl p-3 text-center font-bold">
                 Кор дар минтакахои гуногун
             </h1>
-            <div className="gap-4 grid grid-cols-1 sm:grid-cols-5 p-4">
+            <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 p-4">
                 {regions.map((item, index) => (
                     <Card
                         key={item.value}
