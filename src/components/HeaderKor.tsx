@@ -37,9 +37,6 @@ export default function App() {
                 <NavbarContent className="sm:hidden pr-3" justify="start">
                     <NavbarBrand className="gap-3">
                         <LogoKor />
-                        <p className="font-bold text-black dark:text-white text-3xl text-inherit">
-                            BEKOR TJ
-                        </p>
                     </NavbarBrand>
                 </NavbarContent>
 
@@ -50,9 +47,6 @@ export default function App() {
                     <NavbarBrand className="gap-3">
                         <div className="flex items-center gap-3 px-2 rounded-lg">
                             <LogoKor />
-                            <p className="font-bold text-black dark:text-white text-3xl text-inherit">
-                                BEKOR TJ
-                            </p>
                         </div>
                     </NavbarBrand>
                     <NavbarItem isActive={pathname == "/"}>
