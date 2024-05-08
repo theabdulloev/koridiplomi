@@ -1,6 +1,7 @@
 import Filter from "@/components/FilterCompanent";
 import KORTJ from "@/components/comm";
 import ToPop from "@/components/totop";
+import { BreadcrumbItem, Breadcrumbs } from "@nextui-org/react";
 import { Metadata, ResolvingMetadata } from "next";
 type Props = {
     params: { slug: string };
@@ -134,62 +135,16 @@ export default async function Page({ params }: { params: { slug: string } }) {
     //         location: "Хуҷанд",
     //         verification: true,
     //     },
-    //     {
-    //         username: "theabdulloev",
-    //         vip: true,
-    //         fullName: "Ismoiljon Abdulloev",
-    //         description: "Бонкдор - коршиноси қарз дар шаҳри Хуҷанд",
-    //         watch: 1025,
-    //         salary: 5000,
-    //         contacts: "+992 97 809 23 23",
-    //         email: "ismoiljon.abdulloev.ibt@gmail.com",
-    //         location: "Хуҷанд",
-    //         verification: true,
-    //     },
-
-    //     {
-    //         username: "theabdulloev",
-    //         vip: false,
-    //         fullName: "Ismoiljon Abdulloev",
-    //         description: "Мутахассиси технологияҳои иттилоотӣ",
-    //         watch: 3245,
-    //         salary: 2700,
-    //         contacts: "+992 97 809 23 23",
-    //         email: "ismoiljon.abdulloev.ibt@gmail.com",
-    //         location: "Хуҷанд",
-    //         verification: true,
-    //     },
-    //     {
-    //         username: "theabdulloev",
-    //         vip: false,
-    //         fullName: "Ismoiljon Abdulloev",
-    //         description: "Мушовири онлайн дар вакти бегоҳӣ",
-    //         watch: 3245,
-    //         salary: 2700,
-    //         contacts: "+992 97 809 23 23",
-    //         email: "ismoiljon.abdulloev.ibt@gmail.com",
-    //         location: "Хуҷанд",
-    //         verification: true,
-    //     },
-    //     {
-    //         username: "theabdulloev",
-    //         vip: false,
-    //         fullName: "Ismoiljon Abdulloev",
-    //         description:
-    //             "Агент барои иҷора, харид ва фурӯши биноҳои истиқоматӣ",
-    //         watch: 3245,
-    //         salary: 1700,
-    //         contacts: "+992 97 809 23 23",
-    //         email: "ismoiljon.abdulloev.ibt@gmail.com",
-    //         location: "Хуҷанд",
-    //         verification: true,
-    //     },
     // ];
 
     return (
         <>
             <div className="p-5 text-center uppercase text-2xl">
                 ИМРУЗ КОРИ ДУСТДОШТААШОНРО ДАР {getName(params.slug)} ёбед!
+                <Breadcrumbs color="primary">
+                        <BreadcrumbItem href="/">Асосӣ</BreadcrumbItem>
+                        <BreadcrumbItem>{getName(params.slug)}</BreadcrumbItem>
+                    </Breadcrumbs>
             </div>
             <div className="container mx-auto grid md:grid-cols-[minmax(200px,_400px)_1fr]">
                 <div>
