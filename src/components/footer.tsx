@@ -49,7 +49,7 @@ export default function Footer() {
           <NotificationIcon />
         </Button>
         <Button
-          href="/profile"
+          href="/login"
           as={Link}
           className={
             pathname == "/profile"

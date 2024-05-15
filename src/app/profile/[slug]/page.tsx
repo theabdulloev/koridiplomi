@@ -1,6 +1,4 @@
 import ProfileCompanent from "@/components/profil";
-export async function generateStaticParams() {}
-
 export default async function Page({ params }: { params: { slug: string } }) {
     const data = {
         username: "theabdulloev",
