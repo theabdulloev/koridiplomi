@@ -17,7 +17,7 @@ export default function LoginPage() {
 
     return (
         <div
-            className="flex flex-col p-4 justify-center items-center mx-auto space-y-2 h-[calc(100vh_-_60px)]
+            className="flex flex-col p-4 justify-center items-center mx-auto space-y-2 h-[calc(100vh_-_120px)]
     "
         >
             <Card className="max-w-[540px] w-full h-full max-h-[700px]">
