@@ -12,6 +12,7 @@ import {
 import React from "react";
 import { toast } from "sonner";
 import GoogleIcon from "./svg/google";
+import FacebookLogo from "./svg/facebook";
 export default function LoginPage() {
     const [selected, setSelected] = React.useState<string | number>("login");
 
@@ -25,7 +26,16 @@ export default function LoginPage() {
                     <p>Хуш омадед</p>
                 </CardHeader>
                 <CardBody className="overflow-hidden h-full">
-                    <div className="py-4">
+                    <div className="py-4 flex gap-2">
+                        <Button
+                            fullWidth
+                            onClick={() => toast("Временно не работает")}
+                            color="default"
+                            className="text-primary font-bold"
+                        >
+                            <FacebookLogo />
+                            Facebook
+                        </Button>
                         <Button
                             fullWidth
                             onClick={() => toast("Временно не работает")}
