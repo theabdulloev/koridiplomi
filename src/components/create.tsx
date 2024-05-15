@@ -12,7 +12,6 @@ import {
     Radio,
 } from "@nextui-org/react";
 import { toast } from "sonner";
-import PostVacancies from "@/libs/save";
 const regions = [
     { label: "Абдурахман Джами", value: "Abdurahman Jam" },
     { label: "Айни", value: "Ayni" },
@@ -220,8 +219,6 @@ export default function Create() {
                         categoryValue,
                     };
                     toast.loading("Loading");
-                    const result = PostVacancies(newdata);
-                    console.log(result);
                 }}
                 type="submit"
             >

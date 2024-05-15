@@ -116,35 +116,37 @@ const getName = (regionValue: any) => {
     return region ? (
         <span className="text-primary">{region.label}</span>
     ) : (
-        <span>test</span>
+        <>test</>
     );
 };
+
+
 export default async function Page({ params }: { params: { slug: string } }) {
-    const data: [] = await getData();
-    // const data = [
-    //     {
-    //         username: "theabdulloev",
-    //         vip: true,
-    //         fullName: "Ismoiljon Abdulloev",
-    //         description:
-    //             "Мутахассис оид ба тасдиқи амалиёти бонкӣ, филиал дар ш.Хуҷанд",
-    //         watch: 189,
-    //         salary: 1000,
-    //         contacts: "+992 97 809 23 23",
-    //         email: "ismoiljon.abdulloev.ibt@gmail.com",
-    //         location: "Хуҷанд",
-    //         verification: true,
-    //     },
-    // ];
+    // const data: [] = await getData();
+    const data = [
+        {
+            username: "theabdulloev",
+            vip: true,
+            fullName: "Ismoiljon Abdulloev",
+            description:
+                "Мутахассис оид ба тасдиқи амалиёти бонкӣ, филиал дар ш.Хуҷанд",
+            watch: 189,
+            salary: 1000,
+            contacts: "+992 97 809 23 23",
+            email: "ismoiljon.abdulloev.ibt@gmail.com",
+            location: "Хуҷанд",
+            verification: true,
+        },
+    ];
 
     return (
         <>
             <div className="p-5 text-center uppercase text-2xl">
                 ИМРУЗ КОРИ ДУСТДОШТААШОНРО ДАР {getName(params.slug)} ёбед!
                 <Breadcrumbs color="primary">
-                        <BreadcrumbItem href="/">Асосӣ</BreadcrumbItem>
-                        <BreadcrumbItem>{getName(params.slug)}</BreadcrumbItem>
-                    </Breadcrumbs>
+                    <BreadcrumbItem href="/">Асосӣ</BreadcrumbItem>
+                    <BreadcrumbItem>{getName(params.slug)}</BreadcrumbItem>
+                </Breadcrumbs>
             </div>
             <div className="container mx-auto grid md:grid-cols-[minmax(200px,_400px)_1fr]">
                 <div>

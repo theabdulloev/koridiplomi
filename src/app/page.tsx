@@ -102,28 +102,24 @@ const regions = [
 ];
 
 export default async function Home() {
-    const data: [] = await getData();
-    // const data = [
-    //     {
-    //         username: "theabdulloev",
-    //         vip: false,
-    //         fullName: "Ismoiljon Abdulloev",
-    //         description:
-    //             "Агент барои иҷора, харид ва фурӯши биноҳои истиқоматӣ",
-    //         watch: 3245,
-    //         salary: 1700,
-    //         contacts: "+992 97 809 23 23",
-    //         email: "ismoiljon.abdulloev.ibt@gmail.com",
-    //         location: "Хуҷанд",
-    //         verification: true,
-    //     },
-    // ];
+    // const data: [] = await getData();
+    const data = [
+        {
+            username: "theabdulloev",
+            vip: false,
+            fullName: "Ismoiljon Abdulloev",
+            description:
+                "Агент барои иҷора, харид ва фурӯши биноҳои истиқоматӣ",
+            watch: 3245,
+            salary: 1700,
+            contacts: "+992 97 809 23 23",
+            email: "ismoiljon.abdulloev.ibt@gmail.com",
+            location: "Хуҷанд",
+            verification: true,
+        },
+    ];
     return (
         <main>
-            <div className="p-5 text-center uppercase text-2xl">
-                <span className="text-primary mr-2">ИМРУЗ</span>
-                КОРИ ДУСТДОШТААШОНРО ёбед!
-            </div>
             <div className="container mx-auto grid md:grid-cols-[minmax(200px,_400px)_1fr]">
                 <div>
                     <div className="hidden p-4 md:block">
