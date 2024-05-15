@@ -6,7 +6,7 @@ export default function SearcCompanent() {
   const [inputValue, setInputValue] = useState("");
 
   return (
-    <div className="container mx-auto mt-0 px-4">
+    <div className="container mx-auto mt-0">
       <Input
         label="Ҷустуҷу"
         value={inputValue}

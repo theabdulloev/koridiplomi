@@ -10,6 +10,7 @@ import {
     ScrollShadow,
 } from "@nextui-org/react";
 import Link from "next/link";
+import SearcCompanent from "@/components/Search";
 
 async function getData() {
     const res = await fetch("https://ruznomatj.vercel.app/products", {
@@ -102,22 +103,22 @@ const regions = [
 ];
 
 export default async function Home() {
-    // const data: [] = await getData();
-    const data = [
-        {
-            username: "theabdulloev",
-            vip: false,
-            fullName: "Ismoiljon Abdulloev",
-            description:
-                "Агент барои иҷора, харид ва фурӯши биноҳои истиқоматӣ",
-            watch: 3245,
-            salary: 1700,
-            contacts: "+992 97 809 23 23",
-            email: "ismoiljon.abdulloev.ibt@gmail.com",
-            location: "Хуҷанд",
-            verification: true,
-        },
-    ];
+    const data: [] = await getData();
+    // const data = [
+    //     {
+    //         username: "theabdulloev",
+    //         vip: false,
+    //         fullName: "Ismoiljon Abdulloev",
+    //         description:
+    //             "Агент барои иҷора, харид ва фурӯши биноҳои истиқоматӣ",
+    //         watch: 3245,
+    //         salary: 1700,
+    //         contacts: "+992 97 809 23 23",
+    //         email: "ismoiljon.abdulloev.ibt@gmail.com",
+    //         location: "Хуҷанд",
+    //         verification: true,
+    //     },
+    // ];
     return (
         <main>
             <div className="container mx-auto grid md:grid-cols-[minmax(200px,_400px)_1fr]">
@@ -126,14 +127,15 @@ export default async function Home() {
                         <Filter />
                     </div>
                 </div>
-                <div className="w-full h-full p-4 space-y-3 overflow-hidden ">
+                <div className="w-full h-full p-4 space-y-5 overflow-hidden ">
+                    <SearcCompanent></SearcCompanent>
                     <Categories />
                     <ScrollShadow
                         orientation="horizontal"
                         hideScrollBar
                         className="max-h-[300px]"
                     >
-                        <div className="flex w-full h-fit gap-x-2 py-4">
+                        <div className="flex w-full h-fit gap-x-2">
                             {regions.map((item, index) => (
                                 <Card
                                     key={item.value}
