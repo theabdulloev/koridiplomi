@@ -21,6 +21,7 @@ export default function Favorite() {
     ];
     return (
         <div className="w-full p-4">
+            <p className="text-center pb-4 text-xl" >Здесь появятся ваши любимые вакансии</p>
             <KORTJ data={data}></KORTJ>
         </div>
     );
