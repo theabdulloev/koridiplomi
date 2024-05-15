@@ -120,23 +120,24 @@ const getName = (regionValue: any) => {
     );
 };
 
+
 export default async function Page({ params }: { params: { slug: string } }) {
-    const data: [] = await getData();
-    // const data = [
-    //     {
-    //         username: "theabdulloev",
-    //         vip: true,
-    //         fullName: "Ismoiljon Abdulloev",
-    //         description:
-    //             "Мутахассис оид ба тасдиқи амалиёти бонкӣ, филиал дар ш.Хуҷанд",
-    //         watch: 189,
-    //         salary: 1000,
-    //         contacts: "+992 97 809 23 23",
-    //         email: "ismoiljon.abdulloev.ibt@gmail.com",
-    //         location: "Хуҷанд",
-    //         verification: true,
-    //     },
-    // ];
+    // const data: [] = await getData();
+    const data = [
+        {
+            username: "theabdulloev",
+            vip: true,
+            fullName: "Ismoiljon Abdulloev",
+            description:
+                "Мутахассис оид ба тасдиқи амалиёти бонкӣ, филиал дар ш.Хуҷанд",
+            watch: 189,
+            salary: 1000,
+            contacts: "+992 97 809 23 23",
+            email: "ismoiljon.abdulloev.ibt@gmail.com",
+            location: "Хуҷанд",
+            verification: true,
+        },
+    ];
 
     return (
         <>

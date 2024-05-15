@@ -92,20 +92,6 @@ export default function App() {
                 </NavbarContent>
                 <NavbarContent justify="end">
                     <div className="hidden md:block">
-                        <Button
-                            color={
-                                pathname == "/notification"
-                                    ? "primary"
-                                    : "default"
-                            }
-                            variant="light"
-                            href="/notification"
-                            as={Link}
-                        >
-                            <NotificationIcon />
-                        </Button>
-                    </div>
-                    <div className="hidden md:block">
                         <ThemeSwitcher />
                     </div>
                     <NavbarItem>

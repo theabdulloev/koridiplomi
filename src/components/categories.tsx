@@ -64,7 +64,7 @@ export default function Categories() {
                 hideScrollBar
                 className="max-h-[300px]"
             >
-                <div className="space-x-5 flex">
+                <div className="space-x-5 flex py-[2px]">
                     {list.map((item, index) => (
                         <Card
                             className="min-w-36"

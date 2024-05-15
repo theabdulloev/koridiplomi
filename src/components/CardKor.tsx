@@ -40,29 +40,30 @@ export default function Kor({
             <CardHeader className="flex flex-col items-start gap-3">
                 <p className="text-2xl">{description}</p>
                 <div className="text-primary gap-2 text-2xl flex items-center">
-                        <NumberFormatter
-                            suffix=" сомони / мох"
-                            value={salary}
-                            thousandSeparator
-                        />
-                    </div>
+                    <NumberFormatter
+                        suffix=" сомони / мох"
+                        value={salary}
+                        thousandSeparator
+                    />
+                </div>
             </CardHeader>
             <Divider />
             <CardBody>
                 <div className="w-full flex flex-col lg:justify-start gap-3 items-start">
- 
                     <div className="flex gap-2 items-center">
                         <AccauntLogo />
-                        <Link href={`/profile/${username}`} color="primary">
-                            {fullName}
-                        </Link>
-                        {verification ? (
-                            <div className="text-primary">
-                                <VerifyIcon />
-                            </div>
-                        ) : (
-                            <></>
-                        )}
+                        <div className="flex items-center">
+                            <Link href={`/profile/${username}`} color="primary">
+                                {fullName}
+                            </Link>
+                            {verification ? (
+                                <div className="text-primary">
+                                    <VerifyIcon />
+                                </div>
+                            ) : (
+                                <></>
+                            )}
+                        </div>
                     </div>
                     <div className="flex gap-2 items-center ">
                         <WorkIcon />
