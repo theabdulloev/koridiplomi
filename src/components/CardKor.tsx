@@ -69,13 +69,6 @@ export default function Kor({
                         <WorkIcon />
                         Аз 1 сол то 3 сол
                     </div>
-
-    {/*<div className="flex gap-2 items-center">
-                        {" "}
-                        <EmailIcon />
-                        {email}
-                    </div>*/}
-
                     <div className="flex gap-2 items-center">
                         <LocationIcon />
                         {location}
