@@ -70,11 +70,11 @@ export default function Kor({
                         Аз 1 сол то 3 сол
                     </div>
 
-                    <div className="flex gap-2 items-center">
+    {/*<div className="flex gap-2 items-center">
                         {" "}
                         <EmailIcon />
                         {email}
-                    </div>
+                    </div>*/}
 
                     <div className="flex gap-2 items-center">
                         <LocationIcon />
