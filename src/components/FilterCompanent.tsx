@@ -41,7 +41,7 @@ export default function Filter() {
                     variant="bordered"
                     onClick={changeHidden}
                 >
-                    Филтрҳоро нишон диҳед{" "}
+                    Филтрро нишон диҳед{" "}
                 </Button>
             ) : (
                 <div className="space-y-4">
