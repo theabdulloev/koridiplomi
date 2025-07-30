@@ -29,6 +29,14 @@ export default function App() {
     };
     return (
         <>
+            <div className="bg-red-500 w-full max-h-full text-white text-center fixed z-50">
+                Диққат: Ин лоиҳа барои кори дипломӣ мебошад. Ҳамаи маълумотҳо
+                сохтаанд ва воқеӣ нестанд.
+            </div>
+            <div className="w-full h-full bg-white text-white">
+                   Диққат: Ин лоиҳа барои кори дипломӣ мебошад. Ҳамаи маълумотҳо
+                сохтаанд ва воқеӣ нестанд.
+            </div>
             <Navbar
                 isBordered
                 isMenuOpen={toggle}
